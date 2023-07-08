@@ -2,11 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import SkillsItem from "./SkillsItem";
-import { SKILL_LOGOS as skillLogos} from "./skillLogoList";
+import { SKILL_LOGOS as skillLogos } from "./skillLogoList";
 
-const Hero = () => {
+const Skills = () => {
   return (
-    <div id="skills" className="w-full lg:h-auto py-24">
+    <div id="skills" className="w-full min-h-screen py-24">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <h1 className="text-center tracking-widest uppercase text-[#e55151]">
           My TechStack
@@ -27,4 +27,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Skills;

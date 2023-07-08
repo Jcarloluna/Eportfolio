@@ -5,7 +5,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div>
-      <div id="about" className="w-full h-screen text-left">
+      <div id="about" className="w-full min-h-screen text-left">
         <div className="w-full h-full mx-auto px-40 flex justify-between items-center space-x-12">
           <div className="flex-col ">
             <Image src="/MyImage.JPG" width={1000} height={1000} alt="Picture" />
@@ -27,6 +27,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+       
       </div>
     </div>
   );

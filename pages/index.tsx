@@ -4,6 +4,8 @@ import React from "react";
 import About from "../components/About";
 import Skills from "../components/skills/Skills";
 import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import Experience from "../components/Experience";
 
 const Home = () => {
   return (
@@ -18,8 +20,10 @@ const Home = () => {
       </Head>
       <Hero />
       <About />
+      <Experience/>
       <Skills />
       <Projects />
+      <Contact/>
     </div>
   );
 };

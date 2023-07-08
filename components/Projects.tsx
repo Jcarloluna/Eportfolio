@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const Hero = () => {
+const Projects = () => {
   return (
     <div>
       <div id="projects" className="w-full h-screen ">
@@ -23,4 +23,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Projects;
