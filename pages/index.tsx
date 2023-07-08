@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Hero from "../components/Hero"
+import Hero from "../components/Hero";
 import React from "react";
 import About from "../components/About";
-import Skills from "../components/Skills";
-
+import Skills from "../components/skills/Skills";
+import Projects from "../components/Projects";
 
 const Home = () => {
   return (
@@ -16,9 +16,10 @@ const Home = () => {
         />
         <link rel="icon" href="/fav.png" />
       </Head>
-      <Hero/>
-      <About/>
-      <Skills/>
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
     </div>
   );
 };

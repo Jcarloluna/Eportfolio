@@ -5,8 +5,8 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div>
-      <div id="home" className="w-full h-full text-left">
-        <div className="w-full h-full mx-auto p-2 pt-24 flex justify-center items-center">
+      <div id="home" className="w-full h-screen text-left">
+        <div className="w-full h-full mx-auto p-2 flex justify-center items-center">
           <div className="flex-col">
             <p className="uppercase text-sm tracking-widest text-gray-600">
               LET&#39;S BUILD SOMETHING TOGETHER
