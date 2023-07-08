@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <div>
-      <div className="w-full h-screen text-left">
-        <div className="w-full h-full mx-auto p-2 pb-28 flex justify-center items-center">
+      <div id="home" className="w-full h-full text-left">
+        <div className="w-full h-full mx-auto p-2 pt-24 flex justify-center items-center">
           <div className="flex-col">
             <p className="uppercase text-sm tracking-widest text-gray-600">
               LET&#39;S BUILD SOMETHING TOGETHER
@@ -16,9 +16,8 @@ const Hero = () => {
               I&#39;m <span className="text-[#e55151]"> Jhon Carlo Luna</span>
             </h1>
             <h1 className="py-2 text-gray-700">I build things for the Web</h1>
-            <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto text-left">
-              I’m focused on building responsive front-end web applications
-              integrating back-end technologies.
+            <p className="py-4 text-gray-600 sm:max-w-[100%]">
+              Specializing in front-end development while learning back-end technologies
             </p>
           </div>
           <div className="flex-col">

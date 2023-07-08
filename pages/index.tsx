@@ -1,11 +1,15 @@
 import Head from "next/head";
-import Hero from "../components/Hero.jsx"
+import Hero from "../components/Hero"
+import React from "react";
+import About from "../components/About";
+import Skills from "../components/Skills";
+
 
 const Home = () => {
   return (
     <div>
       <Head>
-        <title>JCL | EPortfolio</title>
+        <title>JCL | Frontend Engineer</title>
         <meta
           name="description"
           content="I’m a front-end web developer specializing in building (and occasionally designing) exceptional digital experiences."
@@ -13,6 +17,8 @@ const Home = () => {
         <link rel="icon" href="/fav.png" />
       </Head>
       <Hero/>
+      <About/>
+      <Skills/>
     </div>
   );
 };
