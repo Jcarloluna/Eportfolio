@@ -11,19 +11,23 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>JCL | Frontend Engineer</title>
+        <title>JCLuna</title>
         <meta
           name="description"
           content="I’m a front-end web developer specializing in building (and occasionally designing) exceptional digital experiences."
         />
-        <link rel="icon" href="/fav.png" />
+        <link
+          rel="icon"
+          href="/jcLogoHead.svg"
+         
+        />
       </Head>
       <Hero />
       <About />
-      <Experience/>
+      <Experience />
       <Skills />
       <Projects />
-      <Contact/>
+      <Contact />
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Experience = () => {
       <div className="w-full min-h-screen text-left">
         <div className="w-full h-full mx-auto px-40 flex justify-between items-center space-x-12">
           <div className="flex-col">
-            <h1 className="uppercase tracking-widest text-center pb-8 text-[#e55151]">
+            <h1 className="uppercase tracking-widest text-center pb-8 text-[#e40c2ce1]">
               EXPERIENCE
             </h1>
             <div className="flex flex-row py-8 gap-24">
@@ -24,7 +24,7 @@ const Experience = () => {
               <div className="flex-col">
                 <h3>
                   Frontend Developer Intern{" "}
-                  <span className="text-sm text-[#e55151] mx-12">
+                  <span className="text-sm text-[#e40c2ce1] mx-12">
                     March 2023 - June 2023
                   </span>
                 </h3>

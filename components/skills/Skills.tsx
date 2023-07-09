@@ -8,8 +8,8 @@ const Skills = () => {
   return (
     <div id="skills" className="w-full min-h-screen py-24">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <h1 className="text-center tracking-widest uppercase text-[#e55151]">
-          My TechStack
+        <h1 className="text-center tracking-widest uppercase text-[#e40c2ce1]">
+          SKILLS
         </h1>
         <p className="py-4 text-center">
           Technologies I have used/experienced from college, internship and

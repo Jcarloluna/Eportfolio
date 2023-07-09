@@ -11,7 +11,7 @@ const Hero = () => {
             <Image src="/MyImage.JPG" width={1000} height={1000} alt="Picture" />
           </div>
           <div className="flex-col">
-            <h1 className="uppercase tracking-widest text-center text-[#e55151]">
+            <h1 className="uppercase tracking-widest text-center text-[#e40c2ce1]">
               ABOUT ME
             </h1>
             <div>
