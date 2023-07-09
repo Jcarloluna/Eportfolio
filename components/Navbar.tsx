@@ -55,7 +55,7 @@ const Navbar = () => {
     >
       <div className="flex-col">
         <Image
-          src="/jcLogov2.png"
+          src="/assets/jcLogov2.png"
           width={shadow ? 45 : 80}
           height={shadow ? 45 : 80}
           alt="Picture"
@@ -122,7 +122,7 @@ const Navbar = () => {
             <div>
               <div className="flex w-full items-center justify-between">
                 <Link href="/">
-                  <Image src={"/jclogov2.png"} width="40" height="40" alt="/" />
+                  <Image src={"/assets/jclogov2.png"} width="40" height="40" alt="/" />
                 </Link>
                 <div
                   onClick={handleBurger}

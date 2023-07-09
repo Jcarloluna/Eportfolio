@@ -14,7 +14,7 @@ const Experience = () => {
             <div className="flex flex-row py-8 gap-24">
               <div className="flex-col">
                 <Image
-                  src="/xurpasLogo.png"
+                  src="/assets/xurpasLogo.png"
                   alt="Image"
                   width={500}
                   height={400}

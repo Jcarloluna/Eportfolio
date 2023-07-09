@@ -8,7 +8,7 @@ const Hero = () => {
       <div id="about" className="w-full min-h-screen text-left">
         <div className="w-full h-full mx-auto px-40 flex justify-between items-center space-x-12">
           <div className="flex-col ">
-            <Image src="/MyImage.JPG" width={1000} height={1000} alt="Picture" />
+            <Image src="/assets/MyImage.JPG" width={1000} height={1000} alt="Picture" />
           </div>
           <div className="flex-col">
             <h1 className="uppercase tracking-widest text-center text-[#e40c2ce1]">
