@@ -5,70 +5,14 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
-const Contact = () => {
+const Message = () => {
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
-        <p className="text-xl tracking-widest uppercase text-[#e55151]">
-          Contact
-        </p>
-        <h2 className="py-4">Get In Touch</h2>
-        <div className="grid lg:grid-cols-5 gap-8">
-          {/* left */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
-            <div className="lg:p-4 h-full ">
-              <div>
-                <Image
-                  className="rounded-xl hover:scale-105 ease-in duration-300"
-                  src={""}
-                  alt="/"
-                />
-              </div>
-              <div>
-                <h2 className="py-2">Clint Briley</h2>
-                <p>Front-End Developer</p>
-                <p className="py-4">
-                  I am available for freelance or full-time positions. Contact
-                  me and let&apos;s talk.
-                </p>
-              </div>
-              <div>
-                <p className="uppercase pt-8">Connect With Me</p>
-                <div className="flex items-center justify-between py-4">
-                  <a
-                    href="https://www.linkedin.com/in/clint-briley-50056920a/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <FaLinkedinIn />
-                    </div>
-                  </a>
-                  <a
-                    href="https://github.com/fireclint"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <FaGithub />
-                    </div>
-                  </a>
-
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <AiOutlineMail />
-                  </div>
-                  <Link href="/resume" legacyBehavior>
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <BsFillPersonLinesFill />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <h2 className="py-4">Send me a message!</h2>
+        <div className="grid lg:grid-cols-3 ">
           {/* right */}
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+          <div className="col-span-1 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
               <form
                 action="https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060"
@@ -131,4 +75,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Message;

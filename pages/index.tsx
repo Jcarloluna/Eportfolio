@@ -4,7 +4,8 @@ import React from "react";
 import About from "../components/About";
 import Skills from "../components/skills/Skills";
 import Projects from "../components/Projects";
-import Contact from "../components/Contact";
+import Contact from "../components/Contacts/Contact";
+import Message from "../components/Message";
 import Experience from "../components/Experience";
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
         />
         <link
           rel="icon"
-          href="/jcLogoHead.svg"
+          href="/assets/jcLogoHead.svg"
          
         />
       </Head>
@@ -28,6 +29,7 @@ const Home = () => {
       <Skills />
       <Projects />
       <Contact />
+      <Message/>
     </div>
   );
 };

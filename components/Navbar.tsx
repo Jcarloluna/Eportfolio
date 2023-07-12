@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+
 
 const Navbar = () => {
   const [burgerNav, setBurgerNav] = useState(false);
@@ -16,17 +15,6 @@ const Navbar = () => {
   const handleBurger = () => {
     setBurgerNav(!burgerNav);
   };
-  // For alternate icons
-  // useEffect(() => {
-  //   if (burgerNav === true) {
-  //     setBurgerNavBurgerChange("/closeBurgerIcon.png");
-  //   } else {
-  //     setBurgerNavBurgerChange("/burgerIcon.png");
-  //   }
-  //   console.log(burgerNav, "burgerClicked!");
-  // }, [burgerNav]);
-
-  // For Navbar's onscroll shadow
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 100) {
@@ -42,29 +30,31 @@ const Navbar = () => {
   const navStyle =
     "flex flex-row fixed justify-between items-center w-full px-8 md:px-20 lg:px-28 xl:px-48 py-5 ";
   const sectionLinks =
-    "ml-10 text-sm uppercase hover:text-[#e40c2ce1] duration-200";
+    "ml-10 text-lg uppercase hover:text-[#ab3a3adf] duration-200";
 
   return (
     <div
       className={
         shadow
           ? navStyle +
-            "max-h-16 shadow-xl z-[100] ease-in-out duration-1000 bg-[#f7f4e9]"
+            "max-h-16 shadow-xl z-[100] ease-in-out duration-1000 bg-[#EAE5D9]"
           : navStyle + "max-h-28 bg-[#f7f4e90]"
       }
     >
-      <div className="flex-col">
+      <div className="flex-col cursor-pointer group">
+        <ReactLink to="home">
         <Image
-          src="/assets/jcLogov2.png"
+          src="/assets/jclLogo.svg"
           width={shadow ? 45 : 80}
           height={shadow ? 45 : 80}
           alt="Picture"
           layout="fixed"
-          className="ease-in-out duration-500 "
+          className="ease-in-out duration-300 group-hover:scale-110"
         />
+        </ReactLink>
       </div>
       <div className="flex-col">
-        <ul className="hidden lg:flex items-center justify-center">
+        <ul className="hidden lg:flex items-center justify-center text-lg">
           <li className={sectionLinks}>
             <ReactLink to="home">Home</ReactLink>
           </li>
@@ -93,13 +83,13 @@ const Navbar = () => {
               Contact
             </ReactLink>
           </li>
-          <li className="ml-10 text-sm uppercase text-[#f7f4e9] rounded-full bg-[#e40c2ce1] px-3 py-2 cursor-pointer ease-in duration-300 hover:scale-105 hover:bg-[#e40c2cf8]">
+          <li className="ml-10 text-sm uppercase text-[#f7f4e9] rounded-full bg-[#ab3a3adf] px-3 py-2 cursor-pointer ease-in duration-300 hover:scale-105 hover:bg-[#652323df]">
             <Link href="/resume">Resume</Link>
           </li>
         </ul>
         {/* Hamburger Icon */}
         <div onClick={handleBurger} className="lg:hidden cursor-pointer">
-          <AiOutlineMenu size={50} color="#e40c2ce1" />
+          <AiOutlineMenu size={50} color="#ab3a3adf" />
         </div>
 
         {/* Mobile Menu */}
@@ -122,7 +112,12 @@ const Navbar = () => {
             <div>
               <div className="flex w-full items-center justify-between">
                 <Link href="/">
-                  <Image src={"/assets/jclogov2.png"} width="40" height="40" alt="/" />
+                  <Image
+                    src={"/assets/jclogov2.png"}
+                    width="40"
+                    height="40"
+                    alt="/"
+                  />
                 </Link>
                 <div
                   onClick={handleBurger}

@@ -7,6 +7,16 @@
   resolved "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
+"@fontsource/caveat-brush@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.npmjs.org/@fontsource/caveat-brush/-/caveat-brush-5.0.5.tgz"
+  integrity sha512-lLWxBgvMECUdvjCLktatrv+IX5tSW9f8tvvyl2kR2r73EaeXPVfYMTMordWxMLow1IOR0tG1lX7I43zAXM4gVQ==
+
+"@fontsource/indie-flower@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.npmjs.org/@fontsource/indie-flower/-/indie-flower-5.0.5.tgz"
+  integrity sha512-x+DqZX3AqyraSfrvCzSjyk3t/tlIb8draXBk6yUtK4oCkCraQPNbdUak7hIY1JNiMD++Db1HppTBUFAILlVdyA==
+
 "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz"
