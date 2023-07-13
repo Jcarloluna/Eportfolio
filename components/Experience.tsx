@@ -8,7 +8,7 @@ const Experience = () => {
       <div className="w-full min-h-screen text-left">
         <div className="w-full h-full mx-auto px-40 flex justify-between items-center space-x-12">
           <div className="flex-col">
-            <h1 className="uppercase tracking-widest text-center pb-8 text-[#e40c2ce1]">
+            <h1 className="uppercase tracking-widest text-center pb-8 text-[#ab3a3adf]">
               EXPERIENCE
             </h1>
             <div className="flex flex-row py-8 gap-24">

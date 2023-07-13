@@ -15,8 +15,8 @@ const Hero = () => {
         "w-full min-h-screen h-auto lg:text-left pt-28 lg:pt-16 flex justify-center items-center text-center px-8 md:px-20 lg:px-28 xl:px-48"
       `}
     >
-      <div className="w-full h-full mx-auto p-2 grid lg:grid-cols-2 justify-center items-center">
-        <div className="group duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafaca] p-12 rounded-xl border-2 border-black">
+      <div className="w-full relative h-full mx-auto p-2 grid lg:grid-cols-2 justify-center items-center">
+        <div className="group duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafacae0] md:bg-[#fafaca] p-8 rounded-xl border-2 border-black">
           <div className="relative flex justify-end translate-x-4 -translate-y-2">
             <div className="h-3 w-3 rounded-full bg-gray-900 shadow-xl" />
           </div>
@@ -24,7 +24,7 @@ const Hero = () => {
           <h1 className="text-gray-700 ">
             I&#39;m{" "}
             <span className="group-hover:text-[#ab3a3adf]">
-              Jhon Carlo Luna
+              Jhon Carlo
             </span>
           </h1>
           <h1 className="pb-2 text-gray-700">

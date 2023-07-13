@@ -38,3 +38,22 @@ html {
 }
 
 
+
+/* CUSTOM ANIMATIONS */
+.animate-spin-horizontal{
+  animation-duration: 0.8s;
+  animation-name: animate-spin-horizontal;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes animate-spin-horizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+

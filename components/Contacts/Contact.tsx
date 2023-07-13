@@ -12,10 +12,12 @@ const Contact = () => {
             Contacts
           </h1>
           <div>
-              <p className="py-4 uppercase text-gray-600 sm:max-w-[100%] tracking-widest text-center">
-                Let's Connect!
-              </p>
-            </div>
+            <p className="py-4 text-gray-600 sm:max-w-[100%] tracking-widest text-center">
+              If you have any questions, want to collaborate, or simply want to
+              connect, I'd love to hear from you. Let's create impactful and
+              memorable web experiences together!"
+            </p>
+          </div>
           <div
             className={
               "grid lg:grid-cols-3 w-full justify-center lg:justify-between items-center gap-10 pt-12"

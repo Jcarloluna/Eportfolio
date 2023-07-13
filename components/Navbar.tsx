@@ -17,7 +17,7 @@ const Navbar = () => {
   };
   useEffect(() => {
     const handleShadow = () => {
-      if (window.scrollY >= 100) {
+      if (window.scrollY >= 75) {
         setShadow(true);
       } else {
         setShadow(false);
@@ -59,7 +59,7 @@ const Navbar = () => {
             <ReactLink to="home">Home</ReactLink>
           </li>
           <li className={sectionLinks}>
-            <ReactLink to={"about"} smooth={true} duration={650} offset={-50}>
+            <ReactLink to={"about"} smooth={true} duration={650} offset={0}>
               About
             </ReactLink>
           </li>
