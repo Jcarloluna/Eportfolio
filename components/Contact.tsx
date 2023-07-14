@@ -5,11 +5,16 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
-const Message = () => {
+const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
-        <h2 className="py-4">Send me a message!</h2>
+        <h1 className="py-4 text-[#ab3a3adf] text-center">Let's Connect!</h1>
+        <p className="text-gray-700 max-w-[80%] text-center">
+          If you have any questions, want to collaborate, or simply want to
+          connect, I'd love to hear from you. Let's create impactful and
+          memorable web experiences together!
+        </p>
         <div className="grid lg:grid-cols-3 ">
           {/* right */}
           <div className="col-span-1 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
@@ -75,4 +80,4 @@ const Message = () => {
   );
 };
 
-export default Message;
+export default Contact;

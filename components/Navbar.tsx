@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 
-
 const Navbar = () => {
   const [burgerNav, setBurgerNav] = useState(false);
   const [shadow, setShadow] = useState(false);
@@ -30,41 +29,41 @@ const Navbar = () => {
   const navStyle =
     "flex flex-row fixed justify-between items-center w-full px-8 md:px-20 lg:px-28 xl:px-48 py-5 ";
   const sectionLinks =
-    "ml-10 text-lg uppercase hover:text-[#ab3a3adf] duration-200";
+    "ml-10 text-lg uppercase hover:text-[#ab3a3adf] hover:border-b-[3px] ease-in-out hover:border-[#ab3a3adf] ";
 
   return (
     <div
       className={
         shadow
           ? navStyle +
-            "max-h-16 shadow-xl z-[100] ease-in-out duration-1000 bg-[#EAE5D9]"
+            "max-h-16 shadow-xl z-[200] ease-in-out duration-300 bg-[#EAE5D9]"
           : navStyle + "max-h-28 bg-[#f7f4e90]"
       }
     >
       <div className="flex-col cursor-pointer group">
-        <ReactLink to="home">
-        <Image
-          src="/assets/jclLogo.svg"
-          width={shadow ? 45 : 80}
-          height={shadow ? 45 : 80}
-          alt="Picture"
-          layout="fixed"
-          className="ease-in-out duration-300 group-hover:scale-110"
-        />
+        <ReactLink to={"home"}>
+          <Image
+            src="/assets/jclLogo.svg"
+            width={shadow ? 45 : 80}
+            height={shadow ? 45 : 80}
+            alt="Picture"
+            layout="fixed"
+            className="ease-in-out duration-300 group-hover:scale-110"
+          />
         </ReactLink>
       </div>
       <div className="flex-col">
-        <ul className="hidden lg:flex items-center justify-center text-lg">
+        <ul className="hidden lg:flex items-center justify-center">
           <li className={sectionLinks}>
-            <ReactLink to="home">Home</ReactLink>
+            <ReactLink to={"home"}>Home</ReactLink>
           </li>
           <li className={sectionLinks}>
-            <ReactLink to={"about"} smooth={true} duration={650} offset={0}>
+            <ReactLink to={"about"} smooth={true} duration={200} offset={0}>
               About
             </ReactLink>
           </li>
           <li className={sectionLinks}>
-            <ReactLink to={"skills"} smooth={true} duration={650} offset={-50}>
+            <ReactLink to={"skills"} smooth={true} duration={200} offset={-50}>
               Skills
             </ReactLink>
           </li>
@@ -72,20 +71,20 @@ const Navbar = () => {
             <ReactLink
               to={"projects"}
               smooth={true}
-              duration={650}
+              duration={200}
               offset={-50}
             >
               Projects
             </ReactLink>
           </li>
-          <li className={sectionLinks}>
-            <ReactLink to={"contact"} smooth={true} duration={650} offset={-50}>
+          <li className="ml-10 text-sm uppercase text-[#f7f4e9] rounded-full bg-[#ab3a3adf] px-3 py-2 cursor-pointer ease-in duration-300 hover:bg-[#ad4f4fdf]">
+            <ReactLink to={"contact"} smooth={true} duration={200} offset={-50}>
               Contact
             </ReactLink>
           </li>
-          <li className="ml-10 text-sm uppercase text-[#f7f4e9] rounded-full bg-[#ab3a3adf] px-3 py-2 cursor-pointer ease-in duration-300 hover:scale-105 hover:bg-[#652323df]">
+          {/* <li className="ml-10 text-sm uppercase text-[#f7f4e9] rounded-full bg-[#ab3a3adf] px-3 py-2 cursor-pointer ease-in duration-300 hover:scale-105 hover:bg-[#652323df]">
             <Link href="/resume">Resume</Link>
-          </li>
+          </li> */}
         </ul>
         {/* Hamburger Icon */}
         <div onClick={handleBurger} className="lg:hidden cursor-pointer">
@@ -106,7 +105,7 @@ const Navbar = () => {
             className={
               burgerNav
                 ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
-                : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+                : "fixed left-[-200%] top-0 p-10 ease-in duration-500"
             }
           >
             <div>

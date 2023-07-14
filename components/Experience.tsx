@@ -6,32 +6,34 @@ const Experience = () => {
   return (
     <div>
       <div className="w-full min-h-screen text-left">
-        <div className="w-full h-full mx-auto px-40 flex justify-between items-center space-x-12">
+        <div className="w-full h-full mx-auto px-12 md:px-20 lg:px-28 xl:px-48 flex justify-between items-center space-x-12">
           <div className="flex-col">
             <h1 className="uppercase tracking-widest text-center pb-8 text-[#ab3a3adf]">
               EXPERIENCE
             </h1>
-            <div className="flex flex-row py-8 gap-24">
-              <div className="flex-col">
+            <div className="grid md:grid-cols-2 py-8 gap-4">
+              <div className="col-span-1 flex justify-center items-center">
                 <Image
                   src="/assets/xurpasLogo.png"
                   alt="Image"
-                  width={500}
-                  height={400}
-                  layout="responsive"
+                  width={300}
+                  height={250}
+                  className="max-h-[400px] max-w-[400px]"
                 />
               </div>
-              <div className="flex-col">
-                <h3>
-                  Frontend Developer Intern{" "}
-                  <span className="text-sm text-[#e40c2ce1] mx-12">
-                    March 2023 - June 2023
-                  </span>
-                </h3>
-                <ol className="py-4 text-gray-600 sm:max-w-[100%] tracking-widest">
+              <div className="col-span-1">
+                <h2 className="text-gray-700 py-4">
+                  Xurpas Inc | Makati, Philippines
+                </h2>
+                <h4 className="text-gray-700">Frontend Developer Intern</h4>
+                <span className="text-xl text-[#ab3a3adf]">
+                  (March 2023 - June 2023)
+                </span>
+
+                <ol className="py-4 text-sm lg:text-base text-gray-700 sm:max-w-[100%] tracking-wider list-disc space-y-3">
                   <li>
                     Collaborated with a Scrum team utilizing Agile methodologies
-                    as a front-end developer, ensuring timely delivery of
+                    as a frontend developer, ensuring timely delivery of
                     high-quality web applications.
                   </li>
                   <li>
@@ -40,19 +42,73 @@ const Experience = () => {
                     practices, and fostering effective communication.
                   </li>
                   <li>
-                    Developed user-friendly front-end solutions using HTML, CSS,
-                    Ant Design, JavaScript, TypeScript, ReactJS, GraphQL and
-                    BitBucket within the Scrum framework, resulting in improved
-                    user experiences.
+                    Resolve problems, address concerns, and make necessary
+                    modifications as required using HTML, CSS, Ant Design,
+                    JavaScript, TypeScript, ReactJS, GraphQL and Bitbucket
+                    within the Scrum framework, resulting in improved user
+                    experiences.
                   </li>
                   <li>
-                    Completed Udemy training courses on various topics,
-                    including: <br/>React - The Complete Guide (incl Hooks, React
-                    Router, Redux) <br/> Modern React with Redux <br/> GraphQL by Example
-                    <br/>The Complete Guide to Advanced React Component Patterns <br/>
-                    The Git & Github Bootcamp
+                    Completed Udemy training courses on various topics:
+                    <ul className="space-y-1 list-decimal px-12 py-2">
+                      <li>
+                        React - The Complete Guide (incl Hooks, React Router,
+                        Redux)
+                      </li>
+                      <li>Modern React with Redux</li>
+                      <li>GraphQL by Example</li>
+                      <li>
+                        The Complete Guide to Advanced React Component Patterns
+                      </li>
+                      <li>The Git & Github Bootcamp</li>
+                    </ul>
                   </li>
                 </ol>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 py-8 gap-4 flex-col-reverse ">
+              <div className="flex col-span-1 justify-center items-center">
+                <Image
+                  src="/assets/tupLogo.png"
+                  alt="Image"
+                  width={250}
+                  height={250}
+                  className="max-h-[300px] max-w-[300px]"
+                />
+              </div>
+              <div className="col-span-1">
+                <h2 className="text-gray-700 py-4">
+                  Technological University of the Philippines - Cavite
+                </h2>
+                <h3 className="flex text-gray-700">
+                  <div>
+                    <h4>
+                      Bachelor of Engineering Technology major in Computer
+                      Engineering Technology Student
+                    </h4>
+                    <span className="text-xl text-[#ab3a3adf]">
+                      (2019 - 2023)
+                    </span>
+                  </div>
+                </h3>
+                <ul className="py-4 text-sm lg:text-base text-gray-700 sm:max-w-[100%] tracking-wider list-disc space-y-3">
+                  <li>
+                    Managed to graduate with a cum laude distinction, which was
+                    a testament to my consistent academic performance throughout
+                    my stay in the university.
+                  </li>
+                  <li>
+                    Successfully created a responsive user interface using HTML,
+                    CSS, Bootstrap and JavaScript for our capstone project -
+                    profiling and monitoring system, enabling efficient
+                    monitoring of preschoolers' development and nutritional
+                    status.
+                  </li>
+                  <li>
+                    Complied on different mini-project requirements using Python,
+                    Django, Tkinter, PyQT5, MySQL, and ReactJS
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

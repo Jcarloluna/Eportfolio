@@ -8,7 +8,7 @@ type Props = {
 
 const SkillsItem = ({ image, imageLabel }: Props) => {
   return (
-    <div className="group relative">
+    <div className="group relative text-gray-700">
       <div className="absolute h-full w-full -translate-x-2 border-black border-[1px] rounded-2xl bg-[#fafaca]"/>
       <div className="absolute h-full w-full -translate-x-1 border-black border-[1px] rounded-2xl bg-[#fafaca]"/>
       <div className="p-6 shadow-xl w-full h-full rounded-xl group-hover:rotate-[-8deg] group-hover:-translate-y-[8px] group-hover:translate-x-[6px] rotate-[0deg] ease-in duration-300 bg-[#fafaca] overflow-hidden border-black border-[1px]">

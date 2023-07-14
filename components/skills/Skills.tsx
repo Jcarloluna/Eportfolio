@@ -12,7 +12,7 @@ const Skills = () => {
           <h1 className="text-center tracking-widest uppercase text-[#ab3a3adf]">
             SKILLS
           </h1>
-          <p className="py-4 text-center">
+          <p className="py-4 text-center text-gray-700">
             Technologies I have used/experienced from College, Internship and
             Online Courses
           </p>

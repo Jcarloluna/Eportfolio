@@ -11,23 +11,24 @@ const Hero = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsSpin(false);
-    }, 1000);
+    }, 800);
   }, [isSpin]);
 
   return (
     <div>
-      <div id="about" className="w-full h-auto min-h-screen py-40">
+      <div id="about" className="w-full max-w-full h-auto min-h-screen py-40">
         <div className="w-full h-full px-12 md:px-20 lg:px-28 xl:px-48 grid md:grid-cols-2">
           <div className="col-span-1 flex items-center justify-center">
             <Image
               src="/assets/aboutMeImage.svg"
               width={400}
-              height={600}
+              height={400}
               alt="Picture"
               className={
                 isSpin
                   ? "animate-spin-horizontal"
-                  : null + "pt-12 cursor-pointer hover:scale-110 duration-300 ease-in-out"
+                  : null +
+                    "pt-12 cursor-pointer hover:scale-110 duration-300 ease-in-out first-line:max-h-[400px] max-w-[400px]"
               }
               onClick={handleImageClick}
             />
@@ -51,13 +52,12 @@ const Hero = () => {
                     While I currently have a good foundation in frontend
                     technologies and best practices, I'm eager to expand my
                     skills and dive deeper into backend technologies to create
-                    robust and scalable applications. With a background in
-                    Computer Engineering Technology, I approach problem-solving
-                    with an analytical mindset and thrive in collaborative
-                    environments. I'm committed to continuous learning, staying
-                    up-to-date with industry trends, and delivering impactful
-                    web experiences. Let's connect and embark on this exciting
-                    journey together!
+                    robust and scalable applications. With a degree and
+                    background in Computer Engineering Technology, I approach
+                    problem-solving with an analytical mindset and thrive in
+                    collaborative environments. I'm committed to continuous
+                    learning, staying up-to-date with industry trends, and
+                    delivering pleasing web experiences.
                   </li>
                 </ul>
               </div>

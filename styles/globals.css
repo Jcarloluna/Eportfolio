@@ -21,19 +21,31 @@ html {
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-indie
+    @apply text-4xl md:text-5xl lg:text-6xl font-indie 
   }
 
   h2 {
     @apply text-3xl lg:text-4xl
+  }
+
+  h3{
+    @apply text-xl lg:text-2xl 
+  }
+
+  h4{
+    @apply text-lg lg:text-xl
   }
   
   li {
     @apply cursor-pointer
   }
 
+  p{
+    @apply px-2 overflow-clip
+  }
+
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-black
+    @apply shadow-md rounded-xl uppercase bg-[#ab3a3adf] text-white p-2
   }
 }
 
