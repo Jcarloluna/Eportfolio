@@ -29,7 +29,7 @@ const Navbar = () => {
   const navStyle =
     "flex flex-row fixed justify-between items-center w-full px-8 md:px-20 lg:px-28 xl:px-48 py-5 ";
   const sectionLinks =
-    "ml-10 text-lg uppercase hover:text-[#ab3a3adf] hover:border-b-[3px] ease-in-out hover:border-[#ab3a3adf] ";
+    "ml-10 text-lg uppercase hover:text-[#ab3a3adf] hover:border-b-[3px] ease-in-out hover:border-[#ab3a3adf]";
 
   return (
     <div

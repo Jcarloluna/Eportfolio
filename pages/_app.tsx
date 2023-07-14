@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import { Component, Fragment } from "react";
 import '@fontsource/indie-flower';
 import '@fontsource/caveat-brush';
+import Footer from "../components/Footer";
 
 
 function MyApp({ Component, pageProps }: any) {
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }: any) {
     <div>
       <Navbar />
       <Component {...pageProps} />
+     
     </div>
   );
 }

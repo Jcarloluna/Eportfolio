@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         indie: ["Indie Flower", "cursive"],
-        caveatBrush: ["Caveat Brush"]
+        caveatBrush: ["Caveat Brush"],
       },
     },
   },

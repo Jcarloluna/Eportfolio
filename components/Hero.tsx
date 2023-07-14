@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BiSolidCloudDownload } from "react-icons/bi";
+// import { BiSolidCloudDownload } from "react-icons/bi";
+// import { BsLinkedin } from "react-icons/bs";
+// import { FaSquareGithub } from "react-icons/fa6";
+
 const Hero = () => {
   const backgroundStyling = "bg-cover bg-right h-screen";
 
@@ -13,6 +16,7 @@ const Hero = () => {
         "w-full min-h-screen h-auto lg:text-left pt-28 lg:pt-16 flex justify-center items-center px-4 md:px-20 lg:px-28 xl:px-48"
       `}
     >
+      
       <div className="w-full relative h-full mx-auto p-2 grid lg:grid-cols-2 justify-center items-center">
         <div className="group text-left duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafacaf4] md:bg-[#fafaca] p-8 rounded-xl border-2 border-black">
           <div className="relative flex justify-end translate-x-4 -translate-y-2">
@@ -30,21 +34,31 @@ const Hero = () => {
             Specializing in front-end development while exploring back-end
             technologies
           </p>
-          {/* <div className="flex justify-center md:justify-end">
-            <button className="shadow-md font-indie flex">
-              <BiSolidCloudDownload color={"white"} height={"250px"} width={"250px"} />
-              Download CV
+          {/* <div className="flex justify-center md:justify-end gap-3 items-center">
+            <FaSquareGithub
+              color={"#ab3a3adf"}
+              size={"50px"}
+              className="cursor-pointer shadow-sm"
+            />
+            <BsLinkedin
+              color={"#ab3a3adf"}
+              size={"50px"}
+              className="cursor-pointer shadow-md shadow-black"
+            />
+            <button className="shadow-md flex gap-1 items-center justify-center">
+              <BiSolidCloudDownload color={"#fafaca"} size={"25px"} />
+              <p className="text-[#fafaca]">Resume</p>
             </button>
           </div> */}
         </div>
-        <div className="col-span-1">
-          {/* <Image
+        {/* <div className="col-span-1">
+          <Image
             src="/assets/HeroImage.png"
             width={650}
             height={500}
             alt="Picture"
-          /> */}
-        </div>
+          />
+        </div> */}
       </div>
     </div>
   );

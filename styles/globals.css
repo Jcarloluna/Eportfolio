@@ -49,6 +49,26 @@ html {
   }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ab3a3adf;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+  background: #af4f4fdf;
+}
+
 
 
 /* CUSTOM ANIMATIONS */
