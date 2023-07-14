@@ -18,7 +18,7 @@ const Hero = () => {
     >
       
       <div className="w-full relative h-full mx-auto p-2 grid lg:grid-cols-2 justify-center items-center">
-        <div className="group text-left duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafacaf4] md:bg-[#fafaca] p-8 rounded-xl border-2 border-black">
+        <div className="group relative text-left duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafacaf4] md:bg-[#fafaca] p-8 rounded-xl border-2 border-black tracking-widest">
           <div className="relative flex justify-end translate-x-4 -translate-y-2">
             <div className="h-3 w-3 rounded-full bg-gray-900 shadow-xl" />
           </div>
@@ -28,7 +28,7 @@ const Hero = () => {
             <span className="group-hover:text-[#ab3a3adf]">Jhon Carlo</span>
           </h1>
           <h1 className="pb-2 text-gray-700">
-            &lt;<span className="text-[#ab3a3adf]">Web Developer</span>&gt;
+            &lt;<span className="text-[#ab3a3adf] tracking-normal">Web Developer</span>&gt;
           </h1>
           <p className="py-4 text-gray-600 sm:max-w-[100%]">
             Specializing in front-end development while exploring back-end

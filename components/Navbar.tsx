@@ -27,17 +27,17 @@ const Navbar = () => {
 
   // Tailwind Duplications
   const navStyle =
-    "flex flex-row fixed justify-between items-center w-full px-8 md:px-20 lg:px-28 xl:px-48 py-5 ";
+    "flex flex-row fixed justify-between items-center w-full px-8 md:px-20 lg:px-28 xl:px-48 py-5 z-50 ";
   const sectionLinks =
-    "ml-10 text-lg uppercase hover:text-[#ab3a3adf] hover:border-b-[3px] ease-in-out hover:border-[#ab3a3adf]";
+    "ml-10 uppercase tracking-widest hover:text-[#ab3a3adf] hover:border-b-[3px] ease-in-out hover:border-[#ab3a3adf]";
 
   return (
     <div
       className={
         shadow
           ? navStyle +
-            "max-h-16 shadow-xl z-[200] ease-in-out duration-300 bg-[#EAE5D9]"
-          : navStyle + "max-h-28 bg-[#f7f4e90]"
+            "max-h-16 shadow-xl ease-in-out duration-300 bg-[#EAE5D9] text-base  "
+          : navStyle + "max-h-28 bg-[#f7f4e90] text-lg "
       }
     >
       <div className="flex-col cursor-pointer group">
@@ -77,7 +77,7 @@ const Navbar = () => {
               Projects
             </ReactLink>
           </li>
-          <li className="ml-10 text-sm uppercase text-[#f7f4e9] rounded-full bg-[#ab3a3adf] px-3 py-2 cursor-pointer ease-in duration-300 hover:bg-[#ad4f4fdf]">
+          <li className="ml-10 text-lg font-indie tracking-widest text-[#f7f4e9] rounded-full bg-[#ab3a3adf] px-3 py-1 cursor-pointer ease-in hover:bg-[#ad4f4fdf]">
             <ReactLink to={"contact"} smooth={true} duration={200} offset={-50}>
               Contact
             </ReactLink>
@@ -96,7 +96,7 @@ const Navbar = () => {
         <div
           className={
             burgerNav
-              ? "lg:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
+              ? "lg:hidden fixed left-0 top-0 w-full h-full bg-black/70 "
               : ""
           }
         >
@@ -104,15 +104,15 @@ const Navbar = () => {
           <div
             className={
               burgerNav
-                ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
-                : "fixed left-[-200%] top-0 p-10 ease-in duration-500"
+                ? " fixed left-0 top-0 w-[80%] sm:w-[70%] md:w-[60%] h-full bg-[#EAE5D9] border-r-2 border-black p-10 ease-in duration-500 z-50"
+                : "fixed left-[-300%] top-0 p-10 ease-in duration-500"
             }
           >
             <div>
               <div className="flex w-full items-center justify-between">
                 <Link href="/">
                   <Image
-                    src={"/assets/jclogov2.png"}
+                    src={"/assets/jclLogo.svg"}
                     width="40"
                     height="40"
                     alt="/"
@@ -120,25 +120,25 @@ const Navbar = () => {
                 </Link>
                 <div
                   onClick={handleBurger}
-                  className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                  className="p-1 cursor-pointer "
                 >
-                  <AiOutlineClose />
+                  <AiOutlineClose size={40} className="text-[#ab3a3adf]" />
                 </div>
               </div>
-              <div className="border-b border-gray-300 my-4">
-                <p className="w-[85%] md:w-[90%] py-4">
+              <div className="border-b border-gray-700 my-4">
+                <p className="w-[90%] md:w-[90%] py-4 md:text-xl text-lg lg:text-xxl text-gray-700">
                   Let&#39;s build something legendary together
                 </p>
               </div>
             </div>
             <div className="py-4 flex flex-col">
-              <ul className="uppercase">
+              <ul className="uppercase text-[#ab3a3adf] text-xxl justify-center items-center ">
                 <Link href="/">
                   <li
                     onClick={() => setBurgerNav(false)}
                     className="py-4 text-sm"
                   >
-                    Home
+                    <h3>Home</h3>
                   </li>
                 </Link>
                 <Link href="/#about">
@@ -146,7 +146,7 @@ const Navbar = () => {
                     onClick={() => setBurgerNav(false)}
                     className="py-4 text-sm"
                   >
-                    About
+                    <h3>About</h3>
                   </li>
                 </Link>
                 <Link href="/#skills">
@@ -154,7 +154,7 @@ const Navbar = () => {
                     onClick={() => setBurgerNav(false)}
                     className="py-4 text-sm"
                   >
-                    Skills
+                    <h3>Skills</h3>
                   </li>
                 </Link>
                 <Link href="/#projects">
@@ -162,7 +162,7 @@ const Navbar = () => {
                     onClick={() => setBurgerNav(false)}
                     className="py-4 text-sm"
                   >
-                    Projects
+                    <h3>Projects</h3>
                   </li>
                 </Link>
                 <Link href="/#contact">
@@ -170,15 +170,7 @@ const Navbar = () => {
                     onClick={() => setBurgerNav(false)}
                     className="py-4 text-sm"
                   >
-                    Contact
-                  </li>
-                </Link>
-                <Link href="/resume">
-                  <li
-                    onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm"
-                  >
-                    Resume
+                    <h3>Contact</h3>
                   </li>
                 </Link>
               </ul>
