@@ -5,14 +5,14 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
-import { ErrorMessage } from "./Notifications/ErrorMessage";
-import { SuccessMessage } from "./Notifications/SuccessMessage";
+import { MessageBox } from "./Notifications/MessageBox";
 
 const Contact: React.FC<{}> = () => {
   const form = useRef<HTMLFormElement>(null);
-  const [isMessageLoading, setIsMessageLoading] = useState(false);
-  const [renderError, setRenderError] = useState(false);
-  const [renderSuccess, setRenderSuccess] = useState(false);
+  const [isMessageLoading, setIsMessageLoading] = useState<boolean>(false);
+  const [renderMessageBox, setRenderMessageBox] = useState<boolean>(true);
+  const [messageResponseStatus, setMessageResponseStatus] =
+    useState<string>("SUCCESS");
 
   const handleSendMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,17 +30,24 @@ const Contact: React.FC<{}> = () => {
           (result: EmailJSResponseStatus) => {
             console.log(result.text);
             console.log("MESSAGESENT!");
+            setMessageResponseStatus("SUCCESS");
             setIsMessageLoading(false);
-            setRenderSuccess(true);
+            setRenderMessageBox(true);
+            form.current?.reset();
           },
           (error: EmailJSResponseStatus) => {
             console.log(error.text);
             console.log("MESSAGEERROR!");
+            setMessageResponseStatus("ERROR");
             setIsMessageLoading(false);
-            setRenderError(true);
+            setRenderMessageBox(true);
           }
         );
     }
+  };
+
+  const handleBackdrop = () => {
+    setRenderMessageBox(false);
   };
 
   const messageDivStyling =
@@ -110,8 +117,28 @@ const Contact: React.FC<{}> = () => {
           </div>
         </div>
       </div>
-      {renderError && <ErrorMessage />}
-      {renderSuccess && <SuccessMessage />}
+
+      {messageResponseStatus === "SUCCESS"
+        ? renderMessageBox && (
+            <MessageBox
+              messageHeader={messageResponseStatus}
+              messageBody={"Email sent successfully!"}
+              handleBackdrop={handleBackdrop}
+              buttonText={"Okay"}
+            />
+          )
+        : messageResponseStatus === "ERROR"
+        ? renderMessageBox && (
+            <MessageBox
+              messageHeader={messageResponseStatus}
+              messageBody={
+                "I'm sorry Something went wrong! can't sent the message. Connect with me at jclunawork@gmail.com"
+              }
+              handleBackdrop={handleBackdrop}
+              buttonText={"Understandable Goodbye"}
+            />
+          )
+        : null}
     </div>
   );
 };

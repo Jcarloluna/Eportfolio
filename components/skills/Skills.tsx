@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import SkillsItem from "./SkillsItem";
-import { SKILL_LOGOS as skillLogos } from "./skillLogoList";
+import { SKILL_LOGOS as skillLogos } from "./SkillLogoList";
 
 const Skills = () => {
   return (

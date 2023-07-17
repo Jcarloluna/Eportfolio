@@ -25,7 +25,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleShadow);
   }, []);
 
-  // Tailwind Duplications
+  // Tailwind Stylings
   const navStyle =
     "flex flex-row fixed justify-between items-center w-full px-8 md:px-20 lg:px-28 xl:px-48 py-5 z-50 ";
   const sectionLinks =
