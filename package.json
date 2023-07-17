@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@fontsource/caveat-brush": "^5.0.5",
     "@fontsource/indie-flower": "^5.0.5",
     "next": "latest",

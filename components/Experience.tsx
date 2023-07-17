@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const Experience = () => {
+const Experience  = () => {
   return (
     <div>
       <div className="w-full min-h-screen text-left">
@@ -11,17 +11,19 @@ const Experience = () => {
             <h1 className="uppercase tracking-widest text-center pb-8 text-[#ab3a3adf]">
               EXPERIENCE
             </h1>
-            <div className="grid md:grid-cols-2 py-8 gap-4">
-              <div className="col-span-1 flex justify-center items-center">
+            <div className="grid md:grid-cols-3 py-8 space-y-4 md:space-y-0 md:space-x-8  gap-4 md:gap-16">
+              <div className="col-span-2 md:col-span-1 flex justify-center items-center">
                 <Image
                   src="/assets/xurpasLogo.png"
                   alt="Image"
                   width={300}
                   height={250}
+                  layout="responsive"
+
                   className="max-h-[400px] max-w-[400px]"
                 />
               </div>
-              <div className="col-span-1">
+              <div className="col-span-2">
                 <h2 className="text-gray-700 py-4">
                   Xurpas Inc | Makati, Philippines
                 </h2>
@@ -66,17 +68,18 @@ const Experience = () => {
                 </ol>
               </div>
             </div>
-            <div className="grid md:grid-cols-2 py-8 gap-4 flex-col-reverse ">
-              <div className="flex col-span-1 justify-center items-center">
+            <div className="grid md:grid-cols-3 flex-col-reverse  py-8 space-y-4 md:space-x-8 md:gap-16 ">
+              <div className="flex col-span-2 md:col-span-1 justify-center items-center">
                 <Image
                   src="/assets/tupLogo.png"
                   alt="Image"
                   width={250}
                   height={250}
+                  layout="responsive"
                   className="max-h-[300px] max-w-[300px]"
                 />
               </div>
-              <div className="col-span-1">
+              <div className="col-span-2">
                 <h2 className="text-gray-700 py-4">
                   Technological University of the Philippines - Cavite
                 </h2>

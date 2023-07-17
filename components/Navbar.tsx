@@ -54,9 +54,9 @@ const Navbar = () => {
       </div>
       <div className="flex-col">
         <ul className="hidden lg:flex items-center justify-center">
-          <li className={sectionLinks}>
+          {/* <li className={sectionLinks}>
             <ReactLink to={"home"}>Home</ReactLink>
-          </li>
+          </li> */}
           <li className={sectionLinks}>
             <ReactLink to={"about"} smooth={true} duration={200} offset={0}>
               About

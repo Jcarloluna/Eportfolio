@@ -17,29 +17,31 @@ const Hero = () => {
   return (
     <div>
       <div id="about" className="w-full max-w-full h-auto min-h-screen py-40">
-        <div className="w-full h-full px-12 md:px-20 lg:px-28 xl:px-48 grid md:grid-cols-2">
-          <div className="col-span-1 flex items-center justify-center">
+        <div className="w-full h-full px-8 md:px-20 lg:px-28 md:space-y-4 space-y-0 md:space-x-12 xl:px-48 grid md:grid-cols-3 flex-col-reverse">
+          <div className="col-span-2 md:col-span-1 flex items-center justify-center">
             <Image
               src="/assets/aboutMeImage.svg"
-              width={400}
-              height={400}
+              width={500}
+              height={500}
               alt="Picture"
+              layout="responsive"
+              
               className={
                 isSpin
                   ? "animate-spin-horizontal"
                   : null +
-                    "pt-12 cursor-pointer hover:scale-110 duration-300 ease-in-out first-line:max-h-[400px] max-w-[400px]"
+                    "pt-12 cursor-pointer hover:scale-110 duration-300 ease-in-out max-h-[500px] max-w-[500px]"
               }
               onClick={handleImageClick}
             />
           </div>
-          <div className="col-span-1">
+          <div className="col-span-2">
             <h1 className="uppercase tracking-widest text-center text-[#ab3a3adf]">
               ABOUT ME
             </h1>
             <div>
-              <div className="py-4 text-sm lg:text-base text-center text-clip text-gray-700 sm:max-w-[100%] tracking-wider">
-                <ul className="list-inside space-y-4">
+              <div className="py-4 text-sm lg:text-base text-center flex-wrap text-gray-700 max-w-[100%] tracking-wider">
+                <ul className="list-inside space-y-4 max-w-[100%]">
                   <li className="cursor-auto">
                     I'm Jhon Carlo, an aspiring web developer from the
                     Philippines, with a passion for creating captivating user
