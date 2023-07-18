@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import SkillsItem from "./SkillsItem";
-import { SKILL_LOGOS as skillLogos } from "./SkillLogoList";
+import { SKILL_LOGOS } from "./SkillLogoList";
 
 export const Skills = () => {
   return (
@@ -19,7 +19,7 @@ export const Skills = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-8 px-8 pt-6">
-          {skillLogos.map(
+          {SKILL_LOGOS.map(
             ({ image, imageLabel }: { image: string; imageLabel: string }) => (
               <SkillsItem image={image} imageLabel={imageLabel} />
             )

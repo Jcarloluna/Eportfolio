@@ -18,7 +18,7 @@ import Python from "../../public/assets/skillsIcon/python.svg";
 import MySQL from "../../public/assets/skillsIcon/mysql.svg";
 import VSCode from "../../public/assets/skillsIcon/vscode.svg";
 
-const SKILL_LOGOS = [
+export const SKILL_LOGOS = [
   { image: Html, imageLabel: "HTML" },
   { image: Css, imageLabel: "CSS" },
   { image: JavaScript, imageLabel: "JavaScript" },
@@ -40,4 +40,3 @@ const SKILL_LOGOS = [
   // { image: VSCode, imageLabel: "VSCode" },
 ];
 
-export { SKILL_LOGOS };
