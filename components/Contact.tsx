@@ -28,16 +28,16 @@ const Contact: React.FC<{}> = () => {
         )
         .then(
           (result: EmailJSResponseStatus) => {
-            console.log(result.text);
-            console.log("MESSAGESENT!");
+            // console.log(result.text);
+            // console.log("MESSAGESENT!");
             setMessageResponseStatus("SUCCESS");
             setIsMessageLoading(false);
             setRenderMessageBox(true);
             form.current?.reset();
           },
           (error: EmailJSResponseStatus) => {
-            console.log(error.text);
-            console.log("MESSAGEERROR!");
+            // console.log(error.text);
+            // console.log("MESSAGEERROR!");
             setMessageResponseStatus("ERROR");
             setIsMessageLoading(false);
             setRenderMessageBox(true);
@@ -61,40 +61,51 @@ const Contact: React.FC<{}> = () => {
           connect, I'd love to hear from you. Let's create impactful and
           memorable web experiences together!
         </p>
-        <div className="grid lg:grid-cols-5 flex-row-reverse py-24 max-h-[500px]">
+        <div className="grid grid-cols-1 md:grid-cols-5 flex-row-reverse py-12 max-h-[500px] md:gap-8 ">
+          {/*left */}
+          <div className="col-span-3 w-full h-auto shadow-gray-400 px-20 md:px-4 lg:p-4 flex justify-center items-center">
+            <Image
+              src="/assets/contactsIcon/contactPhoto.svg"
+              alt="Image"
+              width={300}
+              height={250}
+              layout="responsive"
+              className="max-h-[500px] max-w-[500px]"
+            />
+          </div>
           {/* right */}
           <div className="col-span-2 w-full h-auto shadow-gray-400 lg:p-4">
-            <div className="p-4">
+            <div className="p-8">
               <form ref={form} method="POST" onSubmit={handleSendMessage}>
                 <div className="space-y-4">
-                  <div className={messageDivStyling}>
-                    <label className="py-2 font-indie tracking-widest">
+                  <div className={messageDivStyling + " h-[120px]"}>
+                    <label className="py-1 font-indie tracking-widest">
                       <h4>Name</h4>
                     </label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-500 bg-gray-100 font-indie tracking-widest"
+                      className="border-2 rounded-lg p-3 flex border-gray-500 bg-gray-100 font-indie tracking-widest h-1/2"
                       type="text"
                       name="user_name"
                       required
                     />
                   </div>
-                  <div className={messageDivStyling}>
-                    <label className="py-2 font-indie tracking-widest">
+                  <div className={messageDivStyling + "  h-[120px]"}>
+                    <label className="py-1 font-indie tracking-widest">
                       <h4>Email</h4>
                     </label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-500 bg-gray-100 font-indie tracking-widest"
+                      className="border-2 rounded-lg p-3 flex border-gray-500 bg-gray-100 font-indie tracking-widest  h-1/2"
                       type="email"
                       name="user_email"
                       required
                     />
                   </div>
-                  <div className={messageDivStyling}>
+                  <div className={messageDivStyling + " h-[180px]"}>
                     <label className="font-indie tracking-widest py-2">
                       <h4>Message</h4>
                     </label>
                     <textarea
-                      className="border-2 rounded-lg p-3 border-gray-500 bg-gray-100 font-indie tracking-widest"
+                      className="border-2 rounded-lg p-3 border-gray-500 bg-gray-100 font-indie tracking-widest  h-2/3"
                       rows={5}
                       name="user_message"
                       required
@@ -132,7 +143,7 @@ const Contact: React.FC<{}> = () => {
             <MessageBox
               messageHeader={messageResponseStatus}
               messageBody={
-                "I'm sorry Something went wrong! can't sent the message. Connect with me at jclunawork@gmail.com"
+                "I'm sorry Something went wrong! can't send the message. Connect with me at jclunawork@gmail.com"
               }
               handleBackdrop={handleBackdrop}
               buttonText={"Understandable Goodbye"}
