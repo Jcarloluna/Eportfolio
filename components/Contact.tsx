@@ -66,7 +66,11 @@ export const Contact: React.FC<{}> = () => {
         </p>
 
         <div className=" h-[250px] m:h-[150px] w-full mt-8 itemsfont-indie grid grid-cols-2 md:grid-cols-4 flex-row items-center justify-evenly tracking-widest px-4 mb-14 md:mb-0">
-          <Link href={""} className="justify-around items-center flex">
+          <Link
+            href={"https://github.com/Jcarloluna"}
+            className="justify-around items-center flex"
+            target="_blank"
+          >
             <Image
               src="/assets/contactsIcon/githubCloud.svg"
               alt="Image"
@@ -76,7 +80,11 @@ export const Contact: React.FC<{}> = () => {
               className="max-h-[150px] max-w-[150px] col-span-1"
             />
           </Link>
-          <Link href={""} className="justify-center items-center flex">
+          <Link
+            href={"https://www.linkedin.com/in/jhon-carlo-luna-508a5a265/"}
+            className="justify-center items-center flex"
+            target="_blank"
+          >
             <Image
               src="/assets/contactsIcon/linkedinCloud.svg"
               alt="Image"
@@ -86,7 +94,11 @@ export const Contact: React.FC<{}> = () => {
               className="max-h-[150px] max-w-[150px] col-span-1"
             />
           </Link>
-          <Link href={""} className="justify-center items-center flex">
+          <Link
+            href={"https://www.facebook.com/Carlo.Luna24"}
+            className="justify-center items-center flex"
+            target="_blank"
+          >
             <Image
               src="/assets/contactsIcon/facebookCloud.svg"
               alt="Image"
@@ -96,7 +108,13 @@ export const Contact: React.FC<{}> = () => {
               className="max-h-[150px] max-w-[150px] col-span-1"
             />
           </Link>
-          <Link href={""} className="justify-center items-center flex">
+          <Link
+            href={
+              "https://mail.google.com/mail/u/lee@example.org/?view=cm&to=jclunawork@gmail.com"
+            }
+            className="justify-center items-center flex"
+            target="_blank"
+          >
             <Image
               src="/assets/contactsIcon/gmailCloud.svg"
               alt="Image"
