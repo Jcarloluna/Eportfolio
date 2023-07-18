@@ -45,7 +45,7 @@ html {
   }
 
   button {
-    @apply shadow-md rounded-xl bg-[#ab3a3adf] text-white p-2
+    @apply shadow-md rounded-xl text-white p-2 
   }
 }
 

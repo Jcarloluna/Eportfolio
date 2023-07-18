@@ -5,7 +5,7 @@ import Image from "next/image";
 // import { BsLinkedin } from "react-icons/bs";
 // import { FaSquareGithub } from "react-icons/fa6";
 
-const Hero = () => {
+export const Hero = () => {
   const backgroundStyling = "bg-cover bg-right h-screen";
 
   return (
@@ -64,4 +64,3 @@ const Hero = () => {
   );
 };
 
-export default Hero;

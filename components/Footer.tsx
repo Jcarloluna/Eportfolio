@@ -1,33 +1,52 @@
 import React from "react";
 import { BiSolidCloudDownload } from "react-icons/bi";
+import { BsFacebook } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+import Image from "next/image";
 import { FaSquareGithub } from "react-icons/fa6";
 
-const Footer = () => {
+export const Footer = () => {
   return (
-    <div id="footer" className="w-full h-2/5 flex">
-      <div className="w-full h-full mx-auto px-40 flex justify-center items-center space-x-12">
-        <div className="flex-col">
-          <div className="flex justify-center md:justify-end gap-3 items-center">
-            <FaSquareGithub
-              color={"#ab3a3adf"}
-              size={"50px"}
-              className="cursor-pointer shadow-sm"
-            />
-            <BsLinkedin
-              color={"#ab3a3adf"}
-              size={"50px"}
-              className="cursor-pointer shadow-md shadow-black"
-            />
-            <button className="shadow-md flex gap-1 items-center justify-center">
-              <BiSolidCloudDownload color={"#EAE5D9"} size={"25px"} />
-              <p className="text-[#EAE5D9]">Resume</p>
-            </button>
-          </div>
+    <div
+      id="footer"
+      className="w-full fixed bottom-0 max-h-[60px] z-40 flex flex-row"
+    >
+      <div className="w-full mx-auto px-4 md:px-10 lg:px-20 py-8 flex flex-row justify-center md:justify-between items-center space-y-4 md:space-y-0 md:space-x-12">
+        <div className="flex items-center flex-row gap-3">
+          <Image
+            src="/assets/footerIcon/github.svg"
+            alt="Image"
+            width={25}
+            height={25}
+            layout="responsive"
+            className="max-h-[50px]"
+          />
+          <Image
+            src="/assets/footerIcon/linkedIn.svg"
+            alt="Image"
+            width={25}
+            height={25}
+            layout="responsive"
+            className="max-h-[50px]"
+          />
+          <Image
+            src="/assets/footerIcon/facebook.svg"
+            alt="Image"
+            width={25}
+            height={25}
+            layout="responsive"
+            className="max-h-[50px]"
+          />
+          <Image
+            src="/assets/footerIcon/downloadLogo.png"
+            alt="Image"
+            width={25}
+            height={25}
+            layout="responsive"
+            className="max-h-[50px]"
+          /><span>Resume</span>
         </div>
       </div>
     </div>
   );
 };
-
-export default Footer;

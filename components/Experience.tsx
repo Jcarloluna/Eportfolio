@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const Experience  = () => {
+export const Experience  = () => {
   return (
     <div>
       <div className="w-full min-h-screen text-left">
@@ -121,4 +121,4 @@ const Experience  = () => {
   );
 };
 
-export default Experience;
+

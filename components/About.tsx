@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const Hero = () => {
+export const About = () => {
   const [isSpin, setIsSpin] = useState(false);
   const handleImageClick = () => {
     setIsSpin(true);
@@ -71,4 +71,5 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+
+;

@@ -39,7 +39,7 @@ export const MessageBox = ({
             {messageHeader}
           </h4>
           <p className="text-center">{messageBody}</p>
-          <button className="font-indie tracking-widest min-w-[120px]">
+          <button className="font-indie tracking-widest min-w-[120px] bg-[#ab3a3adf] border-2 border-gray-800">
             {buttonText ? buttonText : "Okay"}
           </button>
         </div>
