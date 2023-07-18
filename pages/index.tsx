@@ -7,6 +7,7 @@ import Projects from "../components/Projects";
 import { Contact } from "../components/Contact";
 import { Experience } from "../components/Experience";
 import { Footer } from "../components/Footer";
+import { SlideUp } from "../components/SlideUp";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       <Contact />
 
       {/* <Footer /> */}
+      <SlideUp />
     </div>
   );
 };
