@@ -12,7 +12,7 @@ const Contact: React.FC<{}> = () => {
   const [isMessageLoading, setIsMessageLoading] = useState<boolean>(false);
   const [renderMessageBox, setRenderMessageBox] = useState<boolean>(true);
   const [messageResponseStatus, setMessageResponseStatus] =
-    useState<string>("SUCCESS");
+    useState<string>("ERROR");
 
   const handleSendMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ const Contact: React.FC<{}> = () => {
       emailjs
         .sendForm(
           "service_9o3x7q9",
-          "template_g8hzjmo",
+          "templae_g8hzjmo",
           form.current,
           "QWQ5GNmCW38_8pMCk"
         )
@@ -135,7 +135,7 @@ const Contact: React.FC<{}> = () => {
               messageHeader={messageResponseStatus}
               messageBody={"Email sent successfully!"}
               handleBackdrop={handleBackdrop}
-              buttonText={"Okay"}
+              
             />
           )
         : messageResponseStatus === "ERROR"
@@ -143,10 +143,9 @@ const Contact: React.FC<{}> = () => {
             <MessageBox
               messageHeader={messageResponseStatus}
               messageBody={
-                "I'm sorry Something went wrong! can't send the message. Connect with me at jclunawork@gmail.com"
+                "Something went wrong! Feature not working at the moment"
               }
               handleBackdrop={handleBackdrop}
-              buttonText={"Understandable Goodbye"}
             />
           )
         : null}
