@@ -78,7 +78,7 @@ export const Contact: React.FC<{}> = () => {
           </Link>
           <Link href={""} className="justify-center items-center flex">
             <Image
-              src="/assets/contactsIcon/linkedInCloud.svg"
+              src="/assets/contactsIcon/linkedinCloud.svg"
               alt="Image"
               width={150}
               height={150}
