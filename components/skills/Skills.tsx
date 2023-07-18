@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import SkillsItem from "./SkillsItem";
+import { SkillsItem } from "./SkillsItem";
 import { SKILL_LOGOS } from "../Data/data";
 
 export const Skills = () => {
@@ -29,4 +29,3 @@ export const Skills = () => {
     </div>
   );
 };
-

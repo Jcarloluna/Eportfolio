@@ -6,7 +6,7 @@ type Props = {
   imageLabel: string;
 };
 
-const SkillsItem = ({ image, imageLabel }: Props) => {
+export const SkillsItem = ({ image, imageLabel }: Props) => {
   return (
     <div className="group relative text-gray-700">
       <div className="absolute h-full w-full -translate-x-2 border-black border-[1px] rounded-xl bg-[#fafaca]"/>
@@ -28,4 +28,3 @@ const SkillsItem = ({ image, imageLabel }: Props) => {
   );
 };
 
-export default SkillsItem;
