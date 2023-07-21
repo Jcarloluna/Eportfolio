@@ -1,15 +1,19 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { SkillsItem } from "./SkillsItem";
+import  SkillsItem  from "./SkillsItem";
 import { SKILL_LOGOS } from "../Data/data";
+import { useInView } from "react-intersection-observer";
 
-export const Skills = () => {
+export const Skills: React.FC<{}> = () => {
+  const { ref: skillsRef, inView: isComponentVisible } = useInView({
+    triggerOnce: true,
+  });
   return (
-    <div id="skills" className="w-full min-h-screen h-auto py-24">
+    <section ref={skillsRef} id="skills" className="w-full min-h-screen h-auto py-24">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <div>
-          <h1 className="text-center tracking-widest uppercase text-[#ab3a3adf]">
+          <h1 className={`text-center tracking-widest uppercase text-[#ab3a3adf] ${isComponentVisible? "animate-scale":""}`}>
             SKILLS
           </h1>
           <p className="py-4 text-center text-gray-700">
@@ -26,6 +30,6 @@ export const Skills = () => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

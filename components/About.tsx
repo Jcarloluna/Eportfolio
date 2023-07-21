@@ -1,75 +1,77 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
-export const About = () => {
-  const [isSpin, setIsSpin] = useState(false);
-  const handleImageClick = () => {
-    setIsSpin(true);
-  };
+export const About: React.FC<{}> = () => {
+  const { ref: aboutRef, inView: isContainerVisible } = useInView({
+    triggerOnce: true,
+  });
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsSpin(false);
-    }, 800);
-  }, [isSpin]);
 
   return (
-    <div>
-      <div id="about" className="w-full max-w-full h-auto min-h-screen py-40">
-        <div className="w-full h-full px-8 md:px-20 lg:px-28 md:space-y-4 space-y-0 md:space-x-12 xl:px-48 grid md:grid-cols-3 flex-col-reverse">
-          <div className="col-span-2 md:col-span-1 flex items-center justify-center">
-            <Image
-              src="/assets/aboutMeImage.svg"
-              width={500}
-              height={500}
-              alt="Picture"
-              layout="responsive"
+    <section
+      ref={aboutRef}
+      id="about"
+      className="w-full max-w-full h-auto min-h-screen my-32 flex justify-center items-center"
+    >
+      <div className="w-full h-full px-8 md:px-20 lg:px-28 md:space-y-4 space-y-0 md:space-x-12 xl:px-48 grid md:grid-cols-3 ">
+        <div className="col-span-2 md:col-span-1 flex items-start justify-center">
+          <Image
+            src="/assets/aboutMeImage.svg"
+            width={500}
+            height={500}
+            alt="Picture"
+            layout="responsive"
+            className={` 
+              ${isContainerVisible ? `scale-100 ` : `scale-50 `} + ${
               
-              className={
-                isSpin
-                  ? "animate-spin-horizontal"
-                  : null +
-                    "pt-12 cursor-pointer hover:scale-110 duration-300 ease-in-out max-h-[500px] max-w-[500px]"
-              }
-              onClick={handleImageClick}
-            />
-          </div>
-          <div className="col-span-2">
-            <h1 className="uppercase tracking-widest text-center text-[#ab3a3adf]">
-              ABOUT ME
-            </h1>
-            <div>
-              <div className="py-4 text-sm lg:text-base text-center flex-wrap text-gray-700 max-w-[100%] tracking-wider">
-                <ul className="list-inside space-y-4 max-w-[100%]">
-                  <li className="cursor-auto">
-                    I'm Jhon Carlo, an aspiring web developer from the
-                    Philippines, with a passion for creating captivating user
-                    experiences.During my college years, I had the opportunity
-                    to work on not so complex full-stack software applications,
-                    which sparked my interest in both frontend and backend
-                    development.
-                  </li>
-                  <li className="cursor-auto">
-                    While I currently have a good foundation in frontend
-                    technologies and best practices, I'm eager to expand my
-                    skills and dive deeper into backend technologies to create
-                    robust and scalable applications. With a degree and
-                    background in Computer Engineering Technology, I approach
-                    problem-solving with an analytical mindset and thrive in
-                    collaborative environments. I'm committed to continuous
-                    learning, staying up-to-date with industry trends, and
-                    delivering pleasing web experiences.
-                  </li>
-                </ul>
-              </div>
+                  "hover:scale-110 duration-300 ease-in-out max-h-[500px] max-w-[500px]"
+            }
+            `}
+           
+          />
+        </div>
+        <div
+          className={`duration-[1000ms] col-span-2 ease-in-out ${
+            isContainerVisible
+              ? "translate-x-[0px] opacity-100"
+              : "translate-x-[500px] opacity-25"
+          }`}
+        >
+          <h1
+            className={`uppercase tracking-widest text-center text-[#ab3a3adf] ${
+              isContainerVisible ? "animate-scale" : ""
+            }`}
+          >
+            ABOUT ME
+          </h1>
+          <div>
+            <div className="py-4 text-sm lg:text-base text-center flex-wrap text-gray-700 max-w-[100%] tracking-wider">
+              <ul className="list-inside space-y-4 max-w-[100%]">
+                <li className="cursor-auto">
+                  I'm Jhon Carlo, an aspiring web developer from the
+                  Philippines, with a passion for creating captivating user
+                  experiences.During my college years, I had the opportunity to
+                  work on not so complex full-stack software applications, which
+                  sparked my interest in both frontend and backend development.
+                </li>
+                <li className="cursor-auto">
+                  While I currently have a good foundation in frontend
+                  technologies and best practices, I'm eager to expand my skills
+                  and dive deeper into backend technologies to create robust and
+                  scalable applications. With a degree and background in
+                  Computer Engineering Technology, I approach problem-solving
+                  with an analytical mindset and thrive in collaborative
+                  environments. I'm committed to continuous learning, staying
+                  up-to-date with industry trends, and delivering pleasing web
+                  experiences.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
-
-
-;

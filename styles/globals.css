@@ -12,6 +12,10 @@ html {
 }
 
 @layer base {
+  section {
+    overflow: hidden;
+  }
+
   body {
     @apply bg-[#EAE5D9] text-[#1d1d2c] tracking-wide
   }
@@ -73,20 +77,116 @@ html {
 
 
 /* CUSTOM ANIMATIONS */
-.animate-spin-horizontal{
-  animation-duration: 0.8s;
-  animation-name: animate-spin-horizontal;
-  animation-fill-mode: forwards;
-  
+.animate-swirl{
+  animation: animate-swirl 1s ease 0s 1 normal forwards;
 }
 
-@keyframes animate-spin-horizontal {
+@keyframes animate-swirl {
   0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
+		opacity: 0;
+		transform: rotate(-540deg) scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(0) scale(1);
+	}
 }
 
+.animate-scale{
+  animation: scale 1s ease 0s 1 normal forwards;
+}
+@keyframes scale {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.animate-shake{
+  animation: shake 2s ease 0s 1 normal forwards;
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 0;
+	}
+
+	10% {
+		transform: rotate(2deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-4deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(4deg);
+	}
+
+	80% {
+		transform: rotate(-2deg);
+	}
+
+	90% {
+		transform: rotate(2deg);
+	}
+}
+
+.animate-shake-up{
+  animation: shake-up 8s ease-in 0s infinite normal forwards;
+}
+
+@keyframes shake-up {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-8px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(8px);
+	}
+
+	80% {
+		transform: translateY(6.4px);
+	}
+
+	90% {
+		transform: translateY(-6.4px);
+	}
+}
+
+.animate-roll{
+  animation: roll 1s ease-in 0s 1 normal forwards;
+}
+
+@keyframes roll {
+	0% {
+		opacity: .50;
+		transform: translateX(-150px) rotate(-200deg);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0) rotate(0deg);
+	}
+}
 

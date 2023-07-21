@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 
-const Navbar = () => {
+const Navbar: React.FC<{}> = () => {
   const [burgerNav, setBurgerNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBurgerChange, setBurgerNavBurgerChange] =
@@ -58,12 +58,12 @@ const Navbar = () => {
             <ReactLink to={"home"}>Home</ReactLink>
           </li>
           <li className={sectionLinks}>
-            <ReactLink to={"about"} smooth={true} duration={200} offset={0}>
+            <ReactLink to={"about"} smooth={true} duration={350} offset={0}>
               About
             </ReactLink>
           </li>
           <li className={sectionLinks}>
-            <ReactLink to={"skills"} smooth={true} duration={200} offset={-50}>
+            <ReactLink to={"skills"} smooth={true} duration={350} offset={-50}>
               Skills
             </ReactLink>
           </li>
@@ -71,14 +71,14 @@ const Navbar = () => {
             <ReactLink
               to={"projects"}
               smooth={true}
-              duration={200}
+              duration={350}
               offset={-50}
             >
               Projects
             </ReactLink>
           </li>
-          <li className="ml-10 text-lg font-indie tracking-widest text-[#f7f4e9] rounded-full bg-[#ab3a3adf] px-3 py-1 cursor-pointer ease-in hover:bg-[#ad4f4fdf]">
-            <ReactLink to={"contact"} smooth={true} duration={200} offset={-50}>
+          <li className="ml-10 text-lg font-indie tracking-widest text-[#f7f4e9] rounded-full bg-[#ab3a3adf] px-3 py-1 cursor-pointer ease-in duration-300 hover:bg-[#862f2fdf]">
+            <ReactLink to={"contact"} smooth={true} duration={350} offset={-50}>
               Contact
             </ReactLink>
           </li>

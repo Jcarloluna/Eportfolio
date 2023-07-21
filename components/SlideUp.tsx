@@ -2,16 +2,16 @@ import React from "react";
 import { Link as ReactLink } from "react-scroll";
 import Image from "next/image";
 
-export const SlideUp = () => {
+export const SlideUp: React.FC<{}> = () => {
   return (
-    <div className="my-12 h-[100px] w-[full] flex items-center justify-center px-28 ">
+    <div className="my-24 h-[100px] w-[full] flex items-center justify-center px-28 ">
       <ReactLink
         to={"home"}
         className="cursor-pointer"
         smooth={true}
         duration={500}
       >
-        <span className="flex justify-center items-center">
+        <span className="animate-shake-up flex justify-center items-center">
           <Image
             src="/assets/contactsIcon/iconSlideUp.png"
             alt="Image"

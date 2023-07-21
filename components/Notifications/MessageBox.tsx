@@ -8,7 +8,7 @@ type Props = {
   buttonText?: string;
 };
 
-export const MessageBox = ({
+export const MessageBox: React.FC<Props> = ({
   messageHeader,
   messageBody,
   handleBackdrop,

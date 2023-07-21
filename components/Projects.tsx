@@ -1,13 +1,22 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
-const Projects = () => {
+const Projects: React.FC<{}> = () => {
+  const { ref: projectsRef, inView: isComponentVisible } = useInView({
+    triggerOnce: true,
+  });
+
   return (
-    <div id="projects" className="w-full h-screen ">
+    <div ref={projectsRef} id="projects" className="w-full h-screen ">
       <div className="w-full h-full mx-auto px-40 flex justify-center items-center space-x-12">
         <div className="flex-col">
-          <h1 className="tracking-widest text-center text-[#ab3a3adf]">
+          <h1
+            className={`tracking-widest text-center text-[#ab3a3adf] ${
+              isComponentVisible ? "animate-scale" : ""
+            }`}
+          >
             PROJECTS
           </h1>
           <div>
