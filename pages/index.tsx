@@ -26,7 +26,7 @@ const Home = () => {
       <Projects />
       <Contact />
 
-      {/* <SlideUp /> */}
+      <SlideUp />
     </div>
   );
 };

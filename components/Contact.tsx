@@ -66,7 +66,7 @@ export const Contact: React.FC<{}> = () => {
     <section
       ref={contactsRef}
       id="contact"
-      className="w-full min-h-fit h-auto py-40 flex flex-col mb-[60px] "
+      className=" w-full min-h-[100%] py-40 flex flex-col mb-[60px] "
     >
       <div className="max-w-[1240px] m-auto px-2 py-8 w-full ">
         <h1
@@ -84,7 +84,7 @@ export const Contact: React.FC<{}> = () => {
 
         <div
           ref={contactsLinksRef}
-          className=" h-[250px] m:h-[150px] w-full mt-8 itemsfont-indie grid grid-cols-2 md:grid-cols-4 flex-row items-center justify-evenly tracking-widest px-4 mb-14 md:mb-0"
+          className=" h-auto m:h-[150px] w-full mt-8 itemsfont-indie grid grid-cols-2 md:grid-cols-4 flex-row items-center justify-evenly tracking-widest px-4 mb-14 md:mb-0"
         >
           <Link
             href={"https://github.com/Jcarloluna"}
@@ -155,7 +155,7 @@ export const Contact: React.FC<{}> = () => {
         </div>
         <div ref={contactsMessageRef}>
           <div
-            className={`duration-[2000ms] grid grid-cols-1 md:grid-cols-5 flex-row-reverse pb-12 max-h-[500px] md:gap-8 ${
+            className={`duration-[2000ms] grid grid-cols-1 md:grid-cols-5 flex-row-reverse pb-12 md:gap-8 ${
               isMessageVisible
                 ? "translate-x-[0px]"
                 : "translate-x-[500px] opacity-0"
@@ -236,7 +236,7 @@ export const Contact: React.FC<{}> = () => {
                     </div>
                     <button
                       disabled={isMessageLoading}
-                      className={`group hover:bg-[#862f2fdf] duration-500 overflow-hidden font-indie tracking-widest text-2xl w-full p-4 text-gray-100 mt-4 border-2 border-gray-800  grid grid-cols-12 justify-between items-center ${
+                      className={`relative group hover:bg-[#862f2fdf] duration-500 overflow-hidden font-indie tracking-widest text-2xl w-full p-4 text-gray-100 mt-4 border-2 border-gray-800  grid grid-cols-12 justify-between items-center ${
                         isMessageLoading
                           ? "bg-[#ad5959df] cursor-wait "
                           : "bg-[#ab3a3adf] " + " "
@@ -246,14 +246,16 @@ export const Contact: React.FC<{}> = () => {
                         <h4>Send Message</h4>
                       </span>
                       <span className="col-span-2 justify-end flex">
-                        <Image
-                          src="/assets/contactsIcon/iconSent2.png"
-                          alt="Image"
-                          width={25}
-                          height={25}
-                          layout="responsive"
-                          className="max-h-[35px] max-w-[35px] duration-700 translate-x-[-320px] rotate-[-45deg] scale-[2.5] group-hover:scale-[1.2] group-hover:rotate-0 group-hover:translate-x-0"
-                        />
+                        <div className="relative duration-700 lg:translate-x-[-950%] lg:group-hover:translate-x-[0%] lg:rotate-[-45deg] lg:-translate-y-[-30%] group-hover:translate-y-[0%] lg:scale-[2.5] group-hover:scale-[1.2] group-hover:rotate-0">
+                          <Image
+                            src="/assets/contactsIcon/iconSent2.png"
+                            alt="Image"
+                            width={25}
+                            height={25}
+                            layout="responsive"
+                            className=" min-h-[50px] min-w-[50px] md:min-h-[35px] md:min-w-[35px] md:max-h-[35px] md:max-w-[35px] "
+                          />
+                        </div>
                       </span>
                     </button>
                   </div>

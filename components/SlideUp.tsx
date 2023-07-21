@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const SlideUp: React.FC<{}> = () => {
   return (
-    <div className="my-24 h-[100px] w-[full] flex items-center justify-center px-28 ">
+    <div className="mb-24 h-[100px] w-[full] flex items-center justify-center px-28 ">
       <ReactLink
         to={"home"}
         className="cursor-pointer"
