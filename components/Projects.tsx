@@ -9,8 +9,8 @@ const Projects: React.FC<{}> = () => {
   });
 
   return (
-    <div ref={projectsRef} id="projects" className="w-full h-screen ">
-      <div className="w-full h-full mx-auto px-40 flex justify-center items-center space-x-12">
+    <div ref={projectsRef} id="projects" className="w-full h-auto min-h-screen ">
+      <div className="w-full h-full mx-auto px-8 md:px-40 flex justify-center items-center space-x-12">
         <div className="flex-col">
           <h1
             className={`tracking-widest text-center text-[#ab3a3adf] ${

@@ -4,10 +4,9 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 export const Experience: React.FC<{}> = () => {
-  const { ref: experienceRef, inView: isComponentVisible } =
-    useInView({
-      triggerOnce: true,
-    });
+  const { ref: experienceRef, inView: isComponentVisible } = useInView({
+    triggerOnce: true,
+  });
   const { ref: xurpasExperienceRef, inView: isXurpasComponentVisible } =
     useInView({
       triggerOnce: true,
@@ -17,10 +16,14 @@ export const Experience: React.FC<{}> = () => {
   });
 
   return (
-    <section ref={experienceRef}className="w-full min-h-screen text-left ">
+    <section ref={experienceRef} className="w-full min-h-screen text-left ">
       <div className="w-full h-full mx-auto py-12 px-12 md:px-20 lg:px-28 xl:px-48 flex justify-between items-center space-x-12">
         <div className="flex-col">
-          <h1 className={`uppercase tracking-widest text-center pb-8 text-[#ab3a3adf] ${isComponentVisible?"animate-scale":""}`}>
+          <h1
+            className={`uppercase tracking-widest text-center pb-8 text-[#ab3a3adf] ${
+              isComponentVisible ? "animate-scale" : ""
+            }`}
+          >
             EXPERIENCE
           </h1>
           <div
@@ -33,8 +36,13 @@ export const Experience: React.FC<{}> = () => {
                 alt="Image"
                 width={300}
                 height={250}
-                layout="responsive"
-                className={`max-h-[400px] hover:scale-110 max-w-[400px] duration-1000 ${isXurpasComponentVisible ? "scale-1":"scale-0"}`}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                className={`max-h-[400px] hover:scale-110 max-w-[400px] duration-1000 ${
+                  isXurpasComponentVisible ? "scale-1" : "scale-0"
+                }`}
               />
             </div>
             <div
@@ -87,18 +95,28 @@ export const Experience: React.FC<{}> = () => {
               </ol>
             </div>
           </div>
-          <div
+          <h1
             ref={tupExperienceRef}
-            className="grid md:grid-cols-3 flex-col-reverse  py-8 space-y-4 md:space-x-8 md:gap-16 "
+            className={`uppercase tracking-widest text-center mt-24 pb-8 text-[#ab3a3adf] ${
+              isTupComponentVisible ? "animate-scale" : ""
+            }`}
           >
+            EDUCATION
+          </h1>
+          <div className="grid md:grid-cols-3 flex-col-reverse  py-8 space-y-4 md:space-x-8 md:gap-16 ">
             <div className="flex col-span-2 md:col-span-1 justify-center items-center">
               <Image
                 src="/assets/tupLogo.png"
                 alt="Image"
-                width={250}
-                height={250}
-                layout="responsive"
-                className={`max-h-[300px] hover:scale-110  max-w-[300px] ${isTupComponentVisible ? "animate-swirl":""}`}
+                width={220}
+                height={220}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                className={`max-h-[300px] hover:scale-110  max-w-[300px] ${
+                  isTupComponentVisible ? "animate-swirl" : ""
+                }`}
               />
             </div>
             <div

@@ -47,7 +47,7 @@ const Navbar: React.FC<{}> = () => {
             width={shadow ? 45 : 80}
             height={shadow ? 45 : 80}
             alt="Picture"
-            layout="fixed"
+       
             className="ease-in-out duration-300 group-hover:scale-110"
           />
         </ReactLink>

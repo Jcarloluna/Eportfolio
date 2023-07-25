@@ -63,7 +63,7 @@ export const Hero: React.FC<{}> = () => {
               technologies
             </p>
             <div className="flex justify-center md:justify-end items-center">
-              <button onClick={handleDownload} className="group px-2 shadow-md active:scale-90 hover:bg-[#862f2fdf] duration-300 flex gap-1 items-center justify-center bg-[#ab3a3adf]">
+              <button onClick={handleDownload} className="group px-2 shadow-md active:scale-90 hover:bg-[#862f2fdf] duration-[150ms] flex gap-1 items-center justify-center bg-[#ab3a3adf]">
                 <BiSolidCloudDownload color={"#FFFFFF"} className="group-hover:animate-bounce" size={"25px"} />
                 <p className="text-[#FFFFFF] font-indie tracking-widest">Download CV</p>
               </button>

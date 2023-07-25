@@ -8,7 +8,6 @@ export const About: React.FC<{}> = () => {
     triggerOnce: true,
   });
 
-
   return (
     <section
       ref={aboutRef}
@@ -22,14 +21,15 @@ export const About: React.FC<{}> = () => {
             width={500}
             height={500}
             alt="Picture"
-            layout="responsive"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
             className={` 
-              ${isContainerVisible ? `scale-100 ` : `scale-50 `} + ${
-              
-                  "hover:scale-110 duration-300 ease-in-out max-h-[500px] max-w-[500px]"
-            }
+              ${
+                isContainerVisible ? `scale-100 ` : `scale-50 `
+              } + ${"hover:scale-110 duration-300 ease-in-out max-h-[500px] max-w-[500px]"}
             `}
-           
           />
         </div>
         <div

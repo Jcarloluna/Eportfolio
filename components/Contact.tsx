@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
@@ -7,8 +8,23 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 import { MessageBox } from "./Notifications/MessageBox";
 import { useInView } from "react-intersection-observer";
+import { useDispatch, useSelector } from "react-redux";
+import { messageModalActions } from "../store";
+import { IRoot } from "../store/interfaces";
 
 export const Contact: React.FC<{}> = () => {
+  const dispatch = useDispatch();
+  const isMessageLoading = useSelector(
+    (state: IRoot) => state.messageModal.isMessageLoading
+  );
+  const showMessageBox = useSelector(
+    (state: IRoot) => state.messageModal.showMessageBox
+  );
+  const messageResponseStatus = useSelector(
+    (state: IRoot) => state.messageModal.messageResponseStatus
+  );
+  const form = useRef<HTMLFormElement>(null);
+
   const { ref: contactsRef, inView: isComponentVisible } = useInView({
     triggerOnce: true,
   });
@@ -18,16 +34,10 @@ export const Contact: React.FC<{}> = () => {
   const { ref: contactsMessageRef, inView: isMessageVisible } = useInView({
     triggerOnce: true,
   });
-  const form = useRef<HTMLFormElement>(null);
-  const [isMessageLoading, setIsMessageLoading] = useState<boolean>(false);
-  const [renderMessageBox, setRenderMessageBox] = useState<boolean>(true);
-  const [messageResponseStatus, setMessageResponseStatus] =
-    useState<string>("");
 
   const handleSendMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsMessageLoading(true);
-    console.log("[Loading]:", isMessageLoading);
+    dispatch(messageModalActions.toggleMessageLoading(true));
     if (form.current) {
       emailjs
         .sendForm(
@@ -40,24 +50,24 @@ export const Contact: React.FC<{}> = () => {
           (result: EmailJSResponseStatus) => {
             // console.log(result.text);
             // console.log("MESSAGESENT!");
-            setMessageResponseStatus("SUCCESS");
-            setIsMessageLoading(false);
-            setRenderMessageBox(true);
+            dispatch(messageModalActions.setResponseStatus("SUCCESS"));
+            dispatch(messageModalActions.toggleMessageLoading(false));
+            dispatch(messageModalActions.toggleMessageBox(true));
             form.current?.reset();
           },
           (error: EmailJSResponseStatus) => {
             // console.log(error.text);
             // console.log("MESSAGEERROR!");
-            setMessageResponseStatus("ERROR");
-            setIsMessageLoading(false);
-            setRenderMessageBox(true);
+            dispatch(messageModalActions.setResponseStatus("ERROR"));
+            dispatch(messageModalActions.toggleMessageLoading(false));
+            dispatch(messageModalActions.toggleMessageBox(true));
           }
         );
     }
   };
 
   const handleBackdrop = () => {
-    setRenderMessageBox(false);
+    dispatch(messageModalActions.toggleMessageBox(false));
   };
 
   const messageDivStyling =
@@ -96,7 +106,6 @@ export const Contact: React.FC<{}> = () => {
               alt="Image"
               width={150}
               height={150}
-              layout="responsive"
               className={` max-h-[150px] max-w-[150px] col-span-1 ${
                 isLinksVisible ? "animate-shake" : ""
               }`}
@@ -112,7 +121,6 @@ export const Contact: React.FC<{}> = () => {
               alt="Image"
               width={150}
               height={150}
-              layout="responsive"
               className={`max-h-[150px] max-w-[150px] col-span-1 ${
                 isLinksVisible ? "animate-shake" : ""
               }`}
@@ -128,7 +136,6 @@ export const Contact: React.FC<{}> = () => {
               alt="Image"
               width={250}
               height={250}
-              layout="responsive"
               className={` max-h-[150px] max-w-[150px] col-span-1 ${
                 isLinksVisible ? "animate-shake" : ""
               }`}
@@ -146,7 +153,6 @@ export const Contact: React.FC<{}> = () => {
               alt="Image"
               width={250}
               height={250}
-              layout="responsive"
               className={`max-h-[150px] max-w-[150px] col-span-1 ${
                 isLinksVisible ? "animate-shake" : ""
               }`}
@@ -168,7 +174,10 @@ export const Contact: React.FC<{}> = () => {
                 alt="Image"
                 width={300}
                 height={250}
-                layout="responsive"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
                 className={`max-h-[500px] max-w-[500px] `}
               />
             </div>
@@ -182,10 +191,9 @@ export const Contact: React.FC<{}> = () => {
                         <Image
                           src="/assets/contactsIcon/iconUser.png"
                           alt="Image"
-                          width={25}
-                          height={25}
-                          layout="responsive"
-                          className="max-h-[40px] max-w-[40px]"
+                          width={35}
+                          height={35}
+                          className="max-h-[35px] max-w-[35px]"
                         />
                         <h4>Name</h4>
                       </label>
@@ -201,9 +209,8 @@ export const Contact: React.FC<{}> = () => {
                         <Image
                           src="/assets/contactsIcon/iconEmail.png"
                           alt="Image"
-                          width={25}
-                          height={25}
-                          layout="responsive"
+                          width={35}
+                          height={35}
                           className="max-h-[35px] max-w-[35px]"
                         />
                         <h4>Email</h4>
@@ -220,9 +227,8 @@ export const Contact: React.FC<{}> = () => {
                         <Image
                           src="/assets/contactsIcon/iconMessage.png"
                           alt="Image"
-                          width={25}
-                          height={25}
-                          layout="responsive"
+                          width={35}
+                          height={35}
                           className="max-h-[35px] max-w-[35px]"
                         />
                         <h4>Message</h4>
@@ -242,17 +248,17 @@ export const Contact: React.FC<{}> = () => {
                           : "bg-[#ab3a3adf] " + " "
                       }`}
                     >
-                      <span className="font-indie flex pl-[20%] items-center justify-center text-center tracking-widest col-span-10">
+                      <span className="z-[2] font-indie flex pl-[20%] items-center justify-center text-center tracking-widest col-span-10">
                         <h4>Send Message</h4>
                       </span>
                       <span className="col-span-2 justify-end flex">
-                        <div className="relative duration-700 lg:translate-x-[-950%] lg:group-hover:translate-x-[0%] lg:rotate-[-45deg] lg:-translate-y-[-30%] group-hover:translate-y-[0%] lg:scale-[2.5] group-hover:scale-[1.2] group-hover:rotate-0">
+                        <div className="z-[1] relative duration-700 lg:translate-x-[-950%] lg:group-hover:translate-x-[0%] lg:rotate-[-45deg] lg:-translate-y-[-30%] lg:scale-[2.5] group-hover:scale-[1.2] group-hover:translate-y-[0%] group-hover:rotate-0">
                           <Image
                             src="/assets/contactsIcon/iconSent2.png"
                             alt="Image"
-                            width={25}
-                            height={25}
-                            layout="responsive"
+                            width={80}
+                            height={80}
+                            
                             className=" min-h-[50px] min-w-[50px] md:min-h-[35px] md:min-w-[35px] md:max-h-[35px] md:max-w-[35px] "
                           />
                         </div>
@@ -267,7 +273,7 @@ export const Contact: React.FC<{}> = () => {
       </div>
 
       {messageResponseStatus === "SUCCESS"
-        ? renderMessageBox && (
+        ? showMessageBox && (
             <MessageBox
               messageHeader={messageResponseStatus}
               messageBody={"Email sent successfully!"}
@@ -275,7 +281,7 @@ export const Contact: React.FC<{}> = () => {
             />
           )
         : messageResponseStatus === "ERROR"
-        ? renderMessageBox && (
+        ? showMessageBox && (
             <MessageBox
               messageHeader={messageResponseStatus}
               messageBody={
