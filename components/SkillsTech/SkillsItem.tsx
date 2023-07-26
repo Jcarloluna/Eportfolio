@@ -36,7 +36,7 @@ const SkillsItem: React.FC<Props> = ({ image, imageLabel }: Props) => {
             />
           </div>
           <div className="flex flex-col cursor-auto items-center justify-center group-hover:font-extrabold group-hover:text-[#ab3a3adf] indie duration-100">
-            <h4>{imageLabel}</h4>
+            <h4 className="dark:text-gray-900">{imageLabel}</h4>
           </div>
         </div>
       </div>

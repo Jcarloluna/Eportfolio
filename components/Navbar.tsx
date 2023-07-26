@@ -33,7 +33,7 @@ const Navbar: React.FC<{}> = () => {
       className={
         shadow
           ? navStyle +
-            "max-h-16 shadow-xl ease-in-out duration-300 bg-[#EAE5D9] text-base  "
+            "max-h-16 shadow-xl ease-in-out duration-300 bg-[#EAE5D9] dark:bg-[#292929] text-base  "
           : navStyle + "max-h-28 bg-[#f7f4e90] text-lg "
       }
     >
@@ -44,6 +44,7 @@ const Navbar: React.FC<{}> = () => {
             width={shadow ? 45 : 80}
             height={shadow ? 45 : 80}
             alt="Picture"
+            priority={true}
        
             className="ease-in-out duration-300 group-hover:scale-110"
           />

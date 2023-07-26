@@ -56,7 +56,7 @@ const Projects: React.FC<{}> = () => {
                 projectLogo,
               }: IProjects) => (
                 <ProjectsItem
-                  key={projectImage}
+                  key={projectTitle}
                   projectLogo={projectLogo}
                   projectImage={projectImage}
                   projectTitle={projectTitle}

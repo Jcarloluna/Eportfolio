@@ -26,7 +26,7 @@ export const Hero: React.FC<{}> = () => {
       id="home"
       ref={heroRef}
       className={`
-        ${backgroundStyling} bg-[url("/assets/heroBackground3.svg")] 
+        ${backgroundStyling} duration-500 bg-[url("/assets/lightBackground2.svg")] dark:bg-[url("/assets/darkBackground4.svg")] 
         "w-full min-h-screen h-auto lg:text-left pt-28 lg:pt-16 flex justify-center items-center px-4 md:px-20 lg:px-28 xl:px-48"
       `}
     >
@@ -34,7 +34,7 @@ export const Hero: React.FC<{}> = () => {
         <div
           className={`overflow-hidden ease-in-out ${
             isContainerVisible ? "opacity-100" : "opacity-0"
-          } group relative text-left duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafacaf4] md:bg-[#fafaca] p-8 rounded-xl border-2 border-black tracking-widest`}
+          } group relative text-left duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafacaf4] md:bg-[#fafaca] p-8 rounded-xl border-2 border-black tracking-widest dark:shadow-[#a3a2a2] dark:shadow-lg`}
         >
           <div className="relative flex justify-end translate-x-4 -translate-y-2">
             <div className="h-3 w-3 rounded-full bg-gray-900 shadow-xl" />
@@ -58,7 +58,7 @@ export const Hero: React.FC<{}> = () => {
               </span>
               &gt;
             </h1>
-            <p className="py-4 text-gray-600 sm:max-w-[100%] animate-draw ">
+            <p className="py-4 text-gray-900 sm:max-w-[100%] animate-draw dark:text-gray-900">
               Specializing in front-end development while exploring back-end
               technologies
             </p>

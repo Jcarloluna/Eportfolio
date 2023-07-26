@@ -55,15 +55,15 @@ export const Experience: React.FC<{}> = () => {
                   : "translate-y-[300px]"
               }`}
             >
-              <h2 className="text-gray-700 py-4 pattern-checks-sm text-pattern white">
+              <h2 className="text-gray-900 py-4 pattern-checks-sm text-pattern white">
                 Xurpas Inc | Makati, Philippines
               </h2>
-              <h4 className="text-gray-700">Frontend Developer Intern</h4>
-              <span className="text-xl text-[#ab3a3adf]">
+              <h4 className="text-gray-900">Frontend Developer Intern</h4>
+              <span className="text-xl text-[#ab3a3adf] ">
                 (March 2023 - June 2023)
               </span>
 
-              <ol className="py-4 text-sm lg:text-base text-gray-700 sm:max-w-[100%] tracking-wider list-disc space-y-3">
+              <ol className="py-4 text-sm lg:text-base text-gray-900 sm:max-w-[100%] tracking-wider list-disc space-y-3">
                 <li>
                   Collaborated with a Scrum team utilizing Agile methodologies
                   as a frontend developer, ensuring timely delivery of
@@ -100,7 +100,7 @@ export const Experience: React.FC<{}> = () => {
           </div>
           <div ref={tupExperienceRef}>
             <h1
-              className={`uppercase tracking-widest text-center mt-[200px] pb-8 text-[#ab3a3adf] ${
+              className={`uppercase tracking-widest text-center mt-[200px] pb-8 text-[#ab3a3adf]  ${
                 isTupComponentVisible ? "animate-scale" : "hidden"
               }`}
             >
@@ -129,21 +129,21 @@ export const Experience: React.FC<{}> = () => {
                     : "translate-y-[300px]"
                 }`}
               >
-                <h2 className="text-gray-700 py-4">
+                <h2 className="text-gray-900 py-4">
                   Technological University of the Philippines - Cavite
                 </h2>
-                <h3 className="flex text-gray-700">
+                <h3 className="flex text-gray-900">
                   <div>
                     <h4>
                       Bachelor of Engineering Technology major in Computer
                       Engineering Technology Student
                     </h4>
-                    <span className="text-xl text-[#ab3a3adf]">
+                    <span className="text-xl text-[#ab3a3adf] ">
                       (2019 - 2023)
                     </span>
                   </div>
                 </h3>
-                <ul className="py-4 text-sm lg:text-base text-gray-700 sm:max-w-[100%] tracking-wider list-disc space-y-3">
+                <ul className="py-4 text-sm lg:text-base text-gray-900 sm:max-w-[100%] tracking-wider list-disc space-y-3">
                   <li>
                     Managed to graduate with a cum laude distinction, which was
                     a testament to my consistent academic performance throughout

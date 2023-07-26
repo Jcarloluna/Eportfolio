@@ -167,13 +167,14 @@ export const Contact: React.FC<{}> = () => {
           >
             {/*left */}
             <div
-              className={`col-span-3 w-full h-auto shadow-gray-400 px-20 md:px-4 lg:p-4 flex justify-center items-center bg-[url("/assets/contactsIcon/nnnoise.svg")] bg-center`}
+              className={`col-span-3 w-full h-auto shadow-gray-400 px-20 md:px-4 lg:p-4 flex justify-center items-center`}
             >
               <Image
                 src="/assets/contactsIcon/contactPhoto.svg"
                 alt="Image"
                 width={300}
                 height={300}
+                priority={true}
                 style={{
                   width: "100%",
                   height: "auto",
@@ -195,7 +196,7 @@ export const Contact: React.FC<{}> = () => {
                           height={35}
                           className="max-h-[35px] max-w-[35px]"
                         />
-                        <h4>Name</h4>
+                        <h4 className="dark:text-gray-900">Name</h4>
                       </label>
                       <input
                         className="border-2 rounded-lg p-3 flex border-gray-500 bg-gray-100 font-indie tracking-widest h-1/2"
@@ -213,7 +214,7 @@ export const Contact: React.FC<{}> = () => {
                           height={35}
                           className="max-h-[35px] max-w-[35px]"
                         />
-                        <h4>Email</h4>
+                        <h4 className="dark:text-gray-900">Email</h4>
                       </label>
                       <input
                         className="border-2 rounded-lg p-3 flex border-gray-500 bg-gray-100 font-indie tracking-widest  h-1/2"
@@ -231,7 +232,7 @@ export const Contact: React.FC<{}> = () => {
                           height={35}
                           className="max-h-[35px] max-w-[35px]"
                         />
-                        <h4>Message</h4>
+                        <h4 className="dark:text-gray-900">Message</h4>
                       </label>
                       <textarea
                         className="border-2 rounded-lg p-3 border-gray-500 bg-gray-100 font-indie tracking-widest  h-2/3"

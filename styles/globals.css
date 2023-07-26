@@ -9,6 +9,7 @@ html {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   scroll-behavior: smooth;
+
 }
 
 @layer base {
@@ -29,23 +30,23 @@ html {
   }
 
   h2 {
-    @apply text-3xl lg:text-4xl
+    @apply text-3xl lg:text-4xl dark:text-[#e3e3e3]
   }
 
   h3{
-    @apply text-xl lg:text-2xl 
+    @apply text-xl lg:text-2xl dark:text-[#e3e3e3]
   }
 
   h4{
-    @apply text-lg lg:text-xl
+    @apply text-lg lg:text-xl dark:text-[#e3e3e3]
   }
   
   li {
-    @apply cursor-pointer
+    @apply cursor-pointer dark:text-[#e3e3e3]
   }
 
   p{
-    @apply lg:text-[16px] sm:text-[15px] text-[14px] px-2 overflow-clip
+    @apply lg:text-[16px] sm:text-[15px] text-[14px] px-2 overflow-clip dark:text-[#e3e3e3]
   }
 
   button {

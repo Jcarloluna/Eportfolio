@@ -33,10 +33,9 @@ export const ProjectsItem: React.FC<IProjects> = ({
       className="relative h-auto w-auto min-w-[25vw] lg:max-w-[30vw] sm:max-w-[70vw] max-w-[90vw]"
     >
       <div className="absolute h-full w-full -translate-x-1 translate-y-1 border-black border-[1px] rounded-[20px] bg-[#fafaca]" />
-      
 
       <div
-        className={`grid hover:shadow-2xl grid-rows-[9] h-full w-full bg-[#fafaca] duration-1000 rounded-[20px] border-[1px] shadow-lg border-gray-800 ${
+        className={`grid hover:shadow-2xl grid-rows-[9] h-full w-full bg-[#fafaca] rounded-[20px] border-[1px] shadow-lg border-gray-800 ${
           isProjectsVisible ? "translate-y-[0]" : "opacity-20"
         } `}
       >
@@ -68,15 +67,19 @@ export const ProjectsItem: React.FC<IProjects> = ({
                 height={100}
                 className="col-span-3"
               />
-              <h3 className="text-center tracking-widest font-indie col-span-9">
+              <h3 className="text-center dark:text-black tracking-widest font-indie col-span-9">
                 {projectTitle}
               </h3>
             </div>
 
-            <p className="text-center capitalize">{projectDescription}</p>
+            <p className="text-center capitalize dark:text-black">
+              {projectDescription}
+            </p>
 
             <span className="text-[#ab3a3adf] text-center flex">
-              <p>{projectTechstack}</p>
+              <p className="dark:text-[#ab3a3adf] ">
+                {projectTechstack}
+              </p>
             </span>
           </div>
           <div className=" flex items-center justify-around row-span-1 px-4">
@@ -93,7 +96,7 @@ export const ProjectsItem: React.FC<IProjects> = ({
                   alt="/"
                   className="group-hover:-translate-y-1 duration-300"
                 />
-                <p className="group-hover:text-[#ab3a3adf] duration-300">
+                <p className="group-hover:text-[#ab3a3adf] dark:text-gray-900 duration-300">
                   <u>Live Preview</u>
                 </p>
               </Link>
@@ -111,7 +114,7 @@ export const ProjectsItem: React.FC<IProjects> = ({
                   alt="/"
                   className="group-hover:-translate-y-1 duration-300"
                 />
-                <p className="group-hover:text-[#ab3a3adf]  duration-300">
+                <p className="group-hover:text-[#ab3a3adf] dark:text-gray-900  duration-300">
                   <u>View Code</u>
                 </p>
               </Link>

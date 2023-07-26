@@ -8,10 +8,11 @@ import { Contact } from "../components/Contact";
 import { Experience } from "../components/Experience";
 import { Footer } from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { DarkModeButton } from "../components/DarkMode";
 
 const Home = () => {
   return (
-    <div>
+    <div className="dark:bg-[#1c1c1c] dark:text-white duration-1000 ease-in-out">
       <Navbar />
       <Head>
         <title>JCLuna</title>
@@ -28,6 +29,7 @@ const Home = () => {
       <Projects />
       <Contact />
       <Footer />
+      <DarkModeButton />
     </div>
   );
 };

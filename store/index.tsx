@@ -1,5 +1,5 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
-import { IMessageModal, INavbar } from "./interfaces";
+import { IDarkMode, IMessageModal, INavbar } from "./interfaces";
 
 const initialContactState: IMessageModal = {
   isMessageLoading: false,
@@ -41,13 +41,30 @@ const navbarSlice = createSlice({
   },
 });
 
+
+const initialDarkModeState: IDarkMode = {
+  darkModeState: false,
+};
+
+const darkModeSlice = createSlice({
+  name: "darkMode",
+  initialState: initialDarkModeState,
+  reducers: {
+    toggleDarkMode(state) {
+      state.darkModeState = !state.darkModeState;
+    },
+  },
+});
+
 const store = configureStore({
   reducer: {
     messageModal: messageModalSlice.reducer,
     navBar: navbarSlice.reducer,
+    darkMode: darkModeSlice.reducer,
   },
 });
 
 export const messageModalActions = messageModalSlice.actions;
 export const navbarActions = navbarSlice.actions;
+export const darkModeActions = darkModeSlice.actions;
 export default store;
