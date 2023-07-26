@@ -37,19 +37,19 @@ export const Footer: React.FC<{}> = () => {
         </div>
         <div className="flex justify-center mt-8 space-x-6">
           <Link
-            href="#"
+            href="https://github.com/Jcarloluna"
             className="text-gray-900 hover:text-[#ab3b3b] hover:scale-110"
           >
             <FaGithub size={35} color="text-gray-900" />
           </Link>
           <Link
-            href="#"
+            href="https://www.facebook.com/Carlo.Luna24"
             className="text-gray-900 hover:text-[#ab3b3b] hover:scale-110"
           >
             <FaFacebook size={35} color="text-gray-900" />
           </Link>
           <Link
-            href="#"
+            href="https://www.linkedin.com/in/jhon-carlo-luna-508a5a265/"
             className="text-gray-900 hover:text-[#ab3b3b] hover:scale-110"
           >
             <FaLinkedin size={35} color="text-gray-900" />
