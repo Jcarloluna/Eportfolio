@@ -87,7 +87,7 @@ export const ProjectsItem: React.FC<IProjects> = ({
                 className="group flex items-center justify-center"
               >
                 <Image
-                  src={"/../public/assets/projectsIcon/iconsLink.png"}
+                  src={"/assets/projectsIcon/iconsLink.png"}
                   width={28}
                   height={28}
                   alt="/"
@@ -105,7 +105,7 @@ export const ProjectsItem: React.FC<IProjects> = ({
                 className="group flex items-center justify-center"
               >
                 <Image
-                  src={"/../public/assets/projectsIcon/iconsGithub.png"}
+                  src={"/assets/projectsIcon/iconsGithub.png"}
                   width={28}
                   height={28}
                   alt="/"
