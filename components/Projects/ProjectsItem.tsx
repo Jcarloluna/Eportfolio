@@ -32,15 +32,15 @@ export const ProjectsItem: React.FC<IProjects> = ({
       ref={projectsRef}
       className="relative h-auto w-auto min-w-[25vw] lg:max-w-[30vw] sm:max-w-[70vw] max-w-[90vw]"
     >
-      <div className="absolute h-full w-full -translate-x-1 translate-y-1 border-black border-[1px] rounded-[20px] bg-[#fafaca]" />
+      <div className="absolute h-full w-full  translate-y-1 border-black border-[1px] rounded-[20px] bg-[#fafaca] dark:bg-[#dedeb5f4]" />
 
       <div
-        className={`grid hover:shadow-2xl grid-rows-[9] h-full w-full bg-[#fafaca] rounded-[20px] border-[1px] shadow-lg border-gray-800 ${
+        className={`grid hover:shadow-2xl grid-rows-[9] h-full w-full bg-[#fafaca] dark:bg-[#dedeb5f4] rounded-[20px] border-[1px] shadow-lg border-gray-800 ${
           isProjectsVisible ? "translate-y-[0]" : "opacity-20"
         } `}
       >
         <div
-          className={`overflow-hidden row-span-2 custom-shadow-inner h-full w-full py-4 bg-yellow-200 border-b-[1px] rounded-[20px] max-h-[200px] border-gray-900 `}
+          className={`overflow-hidden row-span-2 custom-shadow-inner h-full w-full py-4 bg-yellow-200 border-b-[1px]  rounded-[20px] max-h-[200px] border-gray-900 `}
         >
           <div
             className={`justify-center items-start  bg-white mx-4 border-black border-[1px] grid grid-rows-3 min-h-[400px] duration-[2s] ${

@@ -71,8 +71,8 @@ export const Footer: React.FC<{}> = () => {
           </Link>
         </div>
         <p className="mt-8 text-base leading-6 text-center text-gray-900">
-          © Designed and Developed by Jhon Carlo <br />
-          Powered by Caffeine
+          © Designed and Developed by Jhon Carlo with Caffeine
+        
         </p>
       </div>
       <div className="border-b-[40px] border-b-[#A48C7E] border-t-[20px] border-t-[#b9a395]" />

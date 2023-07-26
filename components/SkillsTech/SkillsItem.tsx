@@ -14,10 +14,10 @@ const SkillsItem: React.FC<Props> = ({ image, imageLabel }: Props) => {
 
   return (
     <div ref={skillsRef} className="group relative text-gray-700">
-      <div className="absolute h-full w-full -translate-x-2 border-black border-[1px] rounded-xl bg-[#fafaca]" />
-      <div className="absolute h-full w-full -translate-x-1 border-black border-[1px] rounded-xl bg-[#fafaca]" />
+      <div className="absolute h-full w-full -translate-x-2 border-black border-[1px] rounded-xl bg-[#fafaca] dark:bg-[#dedeb5f4]" />
+      <div className="absolute h-full w-full -translate-x-1 border-black border-[1px] rounded-xl bg-[#fafaca] dark:bg-[#dedeb5f4]" />
       <div
-        className={`p-6 shadow-xl w-full h-full rounded-xl group-hover:rotate-[-8deg] group-hover:-translate-y-[8px] group-hover:translate-x-[6px] rotate-[0deg] ease-in duration-300 bg-[#fafaca] overflow-hidden border-black border-[1px]
+        className={`p-6 shadow-xl w-full h-full rounded-xl group-hover:rotate-[-8deg] group-hover:-translate-y-[8px] group-hover:translate-x-[6px] rotate-[0deg] ease-in duration-300 dark:bg-[#dedeb5f4] bg-[#fafaca] overflow-hidden border-black border-[1px]
         `}
       >
         <div className="fixed justify-start">

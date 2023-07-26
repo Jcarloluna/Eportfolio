@@ -10,7 +10,6 @@ export const DarkModeButton = () => {
 
   useEffect(() => {
     document.body.classList.toggle("dark", darkMode);
-    console.log(`[darkMode]`, darkMode);
   }, [darkMode]);
 
   const handleToggle = () => {
@@ -18,17 +17,29 @@ export const DarkModeButton = () => {
   };
 
   return (
-    <div className="fixed bottom-4 left-4">
-      <div onClick={handleToggle} className="bg-white flex justify-center items-center px-2 rounded-xl cursor-pointer font-indie tracking-widest">
+    <div
+      onClick={handleToggle}
+      className="overflow-hidden fixed bottom-6 max-w-[50] max-h-[50px] left-8 duration-500 dark:bg-white bg-black z-[100] flex justify-center items-center px-2 rounded-xl cursor-pointer font-indie tracking-widest"
+    >
+      <div className="relative">
         <Image
-          src={darkMode ? `/assets/iconSun.png` : `/assets/iconMoon.png`}
+          src={`/assets/iconSun.png`}
           alt="Image"
           width={40}
           height={40}
-          className="duration-500"
+          className={`duration-500 ${
+            !darkMode ? "translate-y-[-50px] translate-x-[30px]" : "translate-y-[20px]"
+          }`}
         />
-        {darkMode && <span className="text-black text-lg"> Light </span>}
-        {!darkMode && <span> Night </span>}
+        <Image
+          src={`/assets/iconMoon2.png`}
+          alt="Image"
+          width={40}
+          height={40}
+          className={`duration-500 ${
+            darkMode ? "translate-y-[50px] translate-x-[-30px]" : " translate-y-[-20px] "
+          }`}
+        />
       </div>
     </div>
   );

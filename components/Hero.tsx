@@ -26,7 +26,7 @@ export const Hero: React.FC<{}> = () => {
       id="home"
       ref={heroRef}
       className={`
-        ${backgroundStyling} duration-500 bg-[url("/assets/lightBackground2.svg")] dark:bg-[url("/assets/darkBackground4.svg")] 
+        ${backgroundStyling} duration-500 bg-[url("/assets/lightBackground3.svg")] dark:bg-[url("/assets/darkBackground4.svg")] 
         "w-full min-h-screen h-auto lg:text-left pt-28 lg:pt-16 flex justify-center items-center px-4 md:px-20 lg:px-28 xl:px-48"
       `}
     >
@@ -34,7 +34,7 @@ export const Hero: React.FC<{}> = () => {
         <div
           className={`overflow-hidden ease-in-out ${
             isContainerVisible ? "opacity-100" : "opacity-0"
-          } group relative text-left duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafacaf4] md:bg-[#fafaca] p-8 rounded-xl border-2 border-black tracking-widest dark:shadow-[#a3a2a2] dark:shadow-lg`}
+          } group relative text-left duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafacaf4] dark:bg-[#dedeb5f4] md:bg-[#fafaca] p-8 rounded-xl border-2 border-black tracking-widest `}
         >
           <div className="relative flex justify-end translate-x-4 -translate-y-2">
             <div className="h-3 w-3 rounded-full bg-gray-900 shadow-xl" />
@@ -65,7 +65,7 @@ export const Hero: React.FC<{}> = () => {
             <div className="flex justify-center md:justify-end items-center">
               <button onClick={handleDownload} className="group px-3 shadow-md active:scale-90 hover:bg-[#862f2fdf] duration-[150ms] flex gap-1 items-center justify-center bg-[#ab3a3adf]">
                 <BiSolidCloudDownload color={"#FFFFFF"} className="group-hover:animate-bounce " size={"25px"} />
-                <p className="text-[#FFFFFF] font-indie tracking-widest">Download CV</p>
+                <p className="text-white font-indie tracking-widest">Download CV</p>
               </button>
             </div>
           </div>

@@ -3,8 +3,11 @@ import { Link as ReactLink } from "react-scroll";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { useSelector } from "react-redux";
+import { IRoot } from "../store/interfaces";
 
 const Navbar: React.FC<{}> = () => {
+  const darkMode = useSelector((state:IRoot) => state.darkMode.darkModeState)
   const [burgerNav, setBurgerNav] = useState(false);
   const [shadow, setShadow] = useState(false);
 
@@ -33,14 +36,14 @@ const Navbar: React.FC<{}> = () => {
       className={
         shadow
           ? navStyle +
-            "max-h-16 shadow-xl ease-in-out duration-300 bg-[#EAE5D9] dark:bg-[#292929] text-base  "
+            "max-h-16 shadow-xl ease-in-out duration-300 bg-[#EAE5D9] dark:bg-[#242424] text-base  "
           : navStyle + "max-h-28 bg-[#f7f4e90] text-lg "
       }
     >
       <div className="flex-col cursor-pointer group">
         <ReactLink to={"home"}>
           <Image
-            src="/assets/jclLogo.svg"
+            src={`/assets/jclLogo.svg`}
             width={shadow ? 45 : 80}
             height={shadow ? 45 : 80}
             alt="Picture"
