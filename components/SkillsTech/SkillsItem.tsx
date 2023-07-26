@@ -27,7 +27,7 @@ const SkillsItem: React.FC<Props> = ({ image, imageLabel }: Props) => {
           <div className="m-auto relative duration-300">
             <Image
               className={`
-                ${isSkillsVisible ? "animate-roll" : "hidden"}
+                ${isSkillsVisible ? "" : "opacity-20"}
               `}
               src={image}
               width={64}

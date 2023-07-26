@@ -53,7 +53,7 @@ export const Hero: React.FC<{}> = () => {
             </h1>
             <h1 className="pb-2 text-gray-700">
               &lt;
-              <span className="text-[#ab3a3adf] tracking-normal animate-draw ">
+              <span className="text-[rgb(171,59,59)] tracking-normal animate-draw ">
                 Web Developer
               </span>
               &gt;
@@ -63,8 +63,8 @@ export const Hero: React.FC<{}> = () => {
               technologies
             </p>
             <div className="flex justify-center md:justify-end items-center">
-              <button onClick={handleDownload} className="group px-2 shadow-md active:scale-90 hover:bg-[#862f2fdf] duration-[150ms] flex gap-1 items-center justify-center bg-[#ab3a3adf]">
-                <BiSolidCloudDownload color={"#FFFFFF"} className="group-hover:animate-bounce" size={"25px"} />
+              <button onClick={handleDownload} className="group px-3 shadow-md active:scale-90 hover:bg-[#862f2fdf] duration-[150ms] flex gap-1 items-center justify-center bg-[#ab3a3adf]">
+                <BiSolidCloudDownload color={"#FFFFFF"} className="group-hover:animate-bounce " size={"25px"} />
                 <p className="text-[#FFFFFF] font-indie tracking-widest">Download CV</p>
               </button>
             </div>

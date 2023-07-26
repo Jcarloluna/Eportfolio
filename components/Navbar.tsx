@@ -1,15 +1,12 @@
 import Image from "next/image";
 import { Link as ReactLink } from "react-scroll";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar: React.FC<{}> = () => {
   const [burgerNav, setBurgerNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBurgerChange, setBurgerNavBurgerChange] =
-    useState("/burgerIcon.png");
 
   const handleBurger = () => {
     setBurgerNav(!burgerNav);
@@ -63,7 +60,7 @@ const Navbar: React.FC<{}> = () => {
             </ReactLink>
           </li>
           <li className={sectionLinks}>
-            <ReactLink to={"skills"} smooth={true} duration={350} offset={-50}>
+            <ReactLink to={"skills"} smooth={true} duration={350} offset={0}>
               Skills
             </ReactLink>
           </li>
@@ -72,7 +69,7 @@ const Navbar: React.FC<{}> = () => {
               to={"projects"}
               smooth={true}
               duration={350}
-              offset={-50}
+              offset={-100}
             >
               Projects
             </ReactLink>

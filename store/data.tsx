@@ -1,3 +1,4 @@
+// Contacts Images
 import Html from "../public/assets/skillsIcon/html.svg";
 import Css from "../public/assets/skillsIcon/css.svg";
 import Bootstrap from "../public/assets/skillsIcon/bootstrap.svg";
@@ -17,6 +18,16 @@ import Django from "../public/assets/skillsIcon/django.svg";
 import Python from "../public/assets/skillsIcon/python.svg";
 import MySQL from "../public/assets/skillsIcon/mysql.svg";
 import VSCode from "../public/assets/skillsIcon/vscode.svg";
+
+// Projects Images
+import Surveillhanz from "../public/assets/projectsIcon/SurveillhanzLogo.svg";
+import surveillhanzBackground from "../public/assets/projectsIcon/surveillhanzBackground.svg";
+import Ppms from "../public/assets/projectsIcon/dasmaLogo.svg";
+import PpmsBackground from "../public/assets/projectsIcon/ppmsBackground.svg";
+import MargiesVeggiesLogo from "../public/assets/projectsIcon/margiesVeggiesLogo.svg";
+import MargiesVeggiesImage from "../public/assets/projectsIcon/margiesVeggiesBackground.svg";
+
+import { IProjects } from "../components/Projects/ProjectsItem";
 
 export const SKILL_LOGOS = [
   { image: Html, imageLabel: "HTML" },
@@ -40,3 +51,33 @@ export const SKILL_LOGOS = [
   // { image: VSCode, imageLabel: "VSCode" },
 ];
 
+export const PROJECTS: IProjects[] = [
+  {
+    projectLogo: Surveillhanz,
+    projectImage: surveillhanzBackground,
+    projectTitle: "Surveillhanz",
+    projectDescription:
+      "A compliance project for our embedded system subject in college. The link provided is only the frontend side of our object recognition application",
+    projectTechstack: "HTML, CSS, NEXTjs, ReactJS",
+    projectWebLink: "https://cpets-surveillhanz.vercel.app",
+    projectGitLink: "https://github.com/Jcarloluna/Surveillhanz",
+  },
+  {
+    projectLogo: Ppms,
+    projectImage: PpmsBackground,
+    projectTitle: "Preschooler Profiling and Monitoring System",
+    projectDescription:
+      "College capstone project, Monitors and Profiles nutritional status of preschoolers in Dasmariñas City ",
+    projectTechstack: "HTML, CSS, JavaScript, Python, Django, MySQL",
+    projectWebLink: "https://ppms.dasmacity.com",
+  },
+  {
+    projectLogo: MargiesVeggiesLogo,
+    projectImage: MargiesVeggiesImage,
+    projectTitle: "Margies Veggies",
+    projectDescription:
+      "A compliance project for our software design subject in college. A desktop application for transaction and storage management system",
+    projectTechstack: "PyQT5, Python, MySQL",
+    projectGitLink: "https://github.com/Jcarloluna/MargiesVeggies",
+  },
+];

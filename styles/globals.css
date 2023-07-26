@@ -17,7 +17,7 @@ html {
   }
 
   body {
-    @apply bg-[#EAE5D9] text-[#1d1d2c] tracking-wide
+    @apply bg-[#eae5d9] text-[#1d1d2c] tracking-wide  
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -45,7 +45,7 @@ html {
   }
 
   p{
-    @apply px-2 overflow-clip
+    @apply lg:text-[16px] sm:text-[15px] text-[14px] px-2 overflow-clip
   }
 
   button {
@@ -190,3 +190,6 @@ html {
 	}
 }
 
+.custom-shadow-inner {
+	box-shadow: inset 0px -15px 15px rgba(0, 0, 0, 0.2);
+  }

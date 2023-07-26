@@ -76,7 +76,7 @@ export const Contact: React.FC<{}> = () => {
     <section
       ref={contactsRef}
       id="contact"
-      className=" w-full min-h-[100%] py-40 flex flex-col mb-[60px] "
+      className={` w-full min-h-[100%] py-20 flex flex-col mb-[60px] `}
     >
       <div className="max-w-[1240px] m-auto px-2 py-8 w-full ">
         <h1
@@ -94,7 +94,7 @@ export const Contact: React.FC<{}> = () => {
 
         <div
           ref={contactsLinksRef}
-          className=" h-auto m:h-[150px] w-full mt-8 itemsfont-indie grid grid-cols-2 md:grid-cols-4 flex-row items-center justify-evenly tracking-widest px-4 mb-14 md:mb-0"
+          className="h-auto m:h-[150px] w-full mt-24 mb-32 grid grid-cols-2 md:grid-cols-4 flex-row items-center justify-evenly tracking-widest px-4 md:mb-4"
         >
           <Link
             href={"https://github.com/Jcarloluna"}
@@ -162,21 +162,21 @@ export const Contact: React.FC<{}> = () => {
         <div ref={contactsMessageRef}>
           <div
             className={`duration-[2000ms] grid grid-cols-1 md:grid-cols-5 flex-row-reverse pb-12 md:gap-8 ${
-              isMessageVisible
-                ? "translate-x-[0px]"
-                : "translate-x-[500px] opacity-0"
+              isMessageVisible ? "animate-scale" : ""
             }`}
           >
             {/*left */}
-            <div className="col-span-3 w-full h-auto shadow-gray-400 px-20 md:px-4 lg:p-4 flex justify-center items-center">
+            <div
+              className={`col-span-3 w-full h-auto shadow-gray-400 px-20 md:px-4 lg:p-4 flex justify-center items-center bg-[url("/assets/contactsIcon/nnnoise.svg")] bg-center`}
+            >
               <Image
                 src="/assets/contactsIcon/contactPhoto.svg"
                 alt="Image"
                 width={300}
-                height={250}
+                height={300}
                 style={{
-                  width: '100%',
-                  height: 'auto',
+                  width: "100%",
+                  height: "auto",
                 }}
                 className={`max-h-[500px] max-w-[500px] `}
               />
@@ -258,7 +258,6 @@ export const Contact: React.FC<{}> = () => {
                             alt="Image"
                             width={80}
                             height={80}
-                            
                             className=" min-h-[50px] min-w-[50px] md:min-h-[35px] md:min-w-[35px] md:max-h-[35px] md:max-w-[35px] "
                           />
                         </div>
