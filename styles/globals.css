@@ -184,20 +184,20 @@ html {
 		transform: translateX(-10vw) rotate(0deg);
 	}
 	10% {
-		transform: translateX(0vw) rotate(180deg);
+		transform: translateX(0vw) rotate(360deg);
 	}
 	30% {
-		transform: translateX(30vw) rotate(360deg);
+		transform: translateX(30vw) rotate(720deg);
 	}
 	50% {
-		transform: translateX(60vw) rotate(720deg);
+		transform: translateX(60vw) rotate(1080deg);
 	}
 	80% {
-		transform: translateX(90vw) rotate(1080deg);
+		transform: translateX(90vw) rotate(1440deg);
 	}
 
 	100% {
-		transform: translateX(140vw) rotate(1440deg);
+		transform: translateX(110vw) rotate(1800deg);
 	}
 
 }
