@@ -176,19 +176,30 @@ html {
 }
 
 .animate-roll{
-  animation: roll 1s ease-in 0s 1 normal forwards;
+  animation: roll 4s ease-in-out 1s 1 normal;
 }
 
 @keyframes roll {
 	0% {
-		opacity: .50;
-		transform: translateX(-150px) rotate(-200deg);
+		transform: translateX(-10vw) rotate(0deg);
+	}
+	10% {
+		transform: translateX(0vw) rotate(180deg);
+	}
+	30% {
+		transform: translateX(30vw) rotate(360deg);
+	}
+	50% {
+		transform: translateX(60vw) rotate(720deg);
+	}
+	80% {
+		transform: translateX(90vw) rotate(1080deg);
 	}
 
 	100% {
-		opacity: 1;
-		transform: translateX(0) rotate(0deg);
+		transform: translateX(140vw) rotate(1440deg);
 	}
+
 }
 
 .custom-shadow-inner {

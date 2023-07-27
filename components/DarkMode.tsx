@@ -19,7 +19,7 @@ export const DarkModeButton = () => {
   return (
     <div
       onClick={handleToggle}
-      className="overflow-hidden fixed bottom-6 max-w-[50] max-h-[50px] left-8 duration-500 dark:bg-white bg-black z-[100] flex justify-center items-center px-2 rounded-xl cursor-pointer font-indie tracking-widest"
+      className="overflow-hidden fixed bottom-6 max-w-[50] max-h-[50px] left-8 duration-500 bg-[#eae5d9] border-2  border-black z-[100] flex justify-center items-center px-2 rounded-xl cursor-pointer font-indie tracking-widest"
     >
       <div className="relative">
         <Image
