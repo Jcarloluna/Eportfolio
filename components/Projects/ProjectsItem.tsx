@@ -23,9 +23,7 @@ export const ProjectsItem: React.FC<IProjects> = ({
   projectWebLink,
   projectGitLink,
 }: IProjects) => {
-  const { ref: projectsRef, inView: isProjectsVisible } = useInView({
-    triggerOnce: true,
-  });
+  const { ref: projectsRef, inView: isProjectsVisible } = useInView({});
 
   return (
     <div
@@ -77,9 +75,7 @@ export const ProjectsItem: React.FC<IProjects> = ({
             </p>
 
             <span className="text-[#ab3a3adf] text-center flex">
-              <p className="dark:text-[#ab3a3adf] ">
-                {projectTechstack}
-              </p>
+              <p className="dark:text-[#ab3a3adf] ">{projectTechstack}</p>
             </span>
           </div>
           <div className=" flex items-center justify-around row-span-1 px-4">

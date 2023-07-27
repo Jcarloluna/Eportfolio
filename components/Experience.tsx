@@ -31,7 +31,7 @@ export const Experience: React.FC<{}> = () => {
           </h1>
           <div
             ref={xurpasExperienceRef}
-            className="grid md:grid-cols-3 py-8 space-y-4 md:space-y-0 md:space-x-8  gap-4 md:gap-16"
+            className="grid md:grid-cols-3 py-2 md:py-8 space-y-4 md:space-y-0 md:space-x-8  gap-4 md:gap-16"
           >
             <div className="col-span-2 md:col-span-1 flex justify-center items-center">
               <Image
@@ -43,7 +43,7 @@ export const Experience: React.FC<{}> = () => {
                   width: "100%",
                   height: "auto",
                 }}
-                className={`max-h-[400px] hover:scale-110 max-w-[400px] duration-1000 ${
+                className={`md:max-h-[400px] max-h-[200px] max-w-[200px] hover:scale-110 md:max-w-[400px] duration-1000 ${
                   isXurpasComponentVisible ? "scale-1" : "scale-0"
                 }`}
               />
@@ -52,7 +52,7 @@ export const Experience: React.FC<{}> = () => {
               className={`col-span-2 duration-[1500ms] ${
                 isXurpasComponentVisible
                   ? "translate-y-[0]"
-                  : "translate-y-[300px]"
+                  : "translate-y-[150px]"
               }`}
             >
               <h2 className="text-gray-900 py-4 pattern-checks-sm text-pattern white">
@@ -100,7 +100,7 @@ export const Experience: React.FC<{}> = () => {
           </div>
           <div ref={tupExperienceRef}>
             <h1
-              className={`uppercase tracking-widest text-center mt-[200px] pb-8 text-[#ab3a3adf]  ${
+              className={`uppercase tracking-widest text-center mt-[100px] pb-8 text-[#ab3a3adf]  ${
                 isTupComponentVisible ? "animate-scale" : "hidden"
               }`}
             >
@@ -117,7 +117,7 @@ export const Experience: React.FC<{}> = () => {
                     width: "100%",
                     height: "auto",
                   }}
-                  className={`max-h-[300px] hover:scale-110  max-w-[300px] ${
+                  className={`md:max-h-[300px] max-h-[150px] max-w-[150px] hover:scale-110  md:max-w-[300px] ${
                     isTupComponentVisible ? "animate-swirl" : ""
                   }`}
                 />
@@ -126,7 +126,7 @@ export const Experience: React.FC<{}> = () => {
                 className={`col-span-2 duration-[1500ms] ${
                   isTupComponentVisible
                     ? "translate-y-[0]"
-                    : "translate-y-[300px]"
+                    : "translate-y-[150px]"
                 }`}
               >
                 <h2 className="text-gray-900 py-4">

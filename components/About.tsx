@@ -12,7 +12,7 @@ export const About: React.FC<{}> = () => {
     <section
       ref={aboutRef}
       id="about"
-      className={`w-full max-w-full h-auto min-h-screen py-32 flex justify-center items-center `}
+      className={`w-full max-w-full h-auto min-h-screen py-24 md:py-32 flex justify-center items-center `}
     >
       <div className="w-full h-full px-8 md:px-20 lg:px-28 md:space-y-4 space-y-0 md:space-x-12 xl:px-48 grid md:grid-cols-3 ">
         <div className="col-span-2 md:col-span-1 flex items-start justify-center">

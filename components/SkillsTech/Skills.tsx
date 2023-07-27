@@ -13,7 +13,7 @@ export const Skills: React.FC<{}> = () => {
     <section
       ref={skillsRef}
       id="skills"
-      className={`relative w-full min-h-screen h-auto py-24`}
+      className={`relative w-full min-h-screen h-auto py-12 md:py-24`}
     >
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <div className="px-8 md:px-32">

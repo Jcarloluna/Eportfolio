@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { IRoot } from "../store/interfaces";
 
 const Navbar: React.FC<{}> = () => {
-  const darkMode = useSelector((state:IRoot) => state.darkMode.darkModeState)
+  const darkMode = useSelector((state: IRoot) => state.darkMode.darkModeState);
   const [burgerNav, setBurgerNav] = useState(false);
   const [shadow, setShadow] = useState(false);
 
@@ -48,7 +48,6 @@ const Navbar: React.FC<{}> = () => {
             height={shadow ? 45 : 80}
             alt="Picture"
             priority={true}
-       
             className="ease-in-out duration-300 group-hover:scale-110"
           />
         </ReactLink>
@@ -105,7 +104,7 @@ const Navbar: React.FC<{}> = () => {
           <div
             className={
               burgerNav
-                ? " fixed left-0 top-0 w-[80%] sm:w-[70%] md:w-[60%] h-full bg-[#EAE5D9] border-r-2 border-black p-10 ease-in duration-500 z-50"
+                ? " fixed left-0 top-0 w-[100%] md:w-[65%] h-full bg-[#EAE5D9] dark:bg-[#1c1c1c] border-r-2 border-black p-10 ease-in duration-500 z-50"
                 : "fixed left-[-300%] top-0 p-10 ease-in duration-500"
             }
           >
@@ -119,59 +118,56 @@ const Navbar: React.FC<{}> = () => {
                     alt="/"
                   />
                 </Link>
-                <div
-                  onClick={handleBurger}
-                  className="p-1 cursor-pointer "
-                >
+                <div onClick={handleBurger} className="p-1 cursor-pointer ">
                   <AiOutlineClose size={40} className="text-[#ab3a3adf]" />
                 </div>
               </div>
-              <div className="border-b border-gray-700 my-4">
-                <p className="w-[90%] md:w-[90%] py-4 md:text-xl text-lg lg:text-xxl text-gray-700">
+              <div className="border-b border-gray-700 my-4 flex justify-center items-center">
+                <p className="w-[90%] md:w-[90%] py-4 md:text-xl text-center text-lg lg:text-xxl text-gray-700">
                   Let&#39;s build something legendary together
                 </p>
               </div>
             </div>
-            <div className="py-4 flex flex-col">
-              <ul className="uppercase text-[#ab3a3adf] text-xxl justify-center items-center ">
+            <div className="py-4 flex flex-col justify-center items-center text-center">
+              <ul className="uppercase text-gray-900 text-xxl  justify-center items-center ">
                 <Link href="/">
                   <li
                     onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm"
+                    className="py-4 text-sm group"
                   >
-                    <h3>Home</h3>
+                    <h3 className="group hover:text-[#ab3a3adf]">Home</h3>
                   </li>
                 </Link>
                 <Link href="/#about">
                   <li
                     onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm"
+                    className="py-4 text-sm group"
                   >
-                    <h3>About</h3>
+                    <h3 className="group hover:text-[#ab3a3adf]">About</h3>
                   </li>
                 </Link>
                 <Link href="/#skills">
                   <li
                     onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm"
+                    className="py-4 text-sm group"
                   >
-                    <h3>Skills</h3>
+                    <h3 className="group hover:text-[#ab3a3adf]">Skills</h3>
                   </li>
                 </Link>
                 <Link href="/#projects">
                   <li
                     onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm"
+                    className="py-4 text-sm group"
                   >
-                    <h3>Projects</h3>
+                    <h3 className="group hover:text-[#ab3a3adf]">Projects</h3>
                   </li>
                 </Link>
                 <Link href="/#contact">
                   <li
                     onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm"
+                    className="py-4 text-sm group"
                   >
-                    <h3>Contact</h3>
+                    <h3 className="group hover:text-[#ab3a3adf]">Contact</h3>
                   </li>
                 </Link>
               </ul>

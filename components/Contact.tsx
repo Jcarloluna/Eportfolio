@@ -76,7 +76,7 @@ export const Contact: React.FC<{}> = () => {
     <section
       ref={contactsRef}
       id="contact"
-      className={` w-full min-h-[100%] py-20 flex flex-col mb-[60px] `}
+      className={` w-full min-h-[100%] py-12 md:py-20 flex flex-col `}
     >
       <div className="max-w-[1240px] m-auto px-2 py-8 w-full ">
         <h1
@@ -94,7 +94,7 @@ export const Contact: React.FC<{}> = () => {
 
         <div
           ref={contactsLinksRef}
-          className="h-auto m:h-[150px] w-full mt-24 mb-32 grid grid-cols-2 md:grid-cols-4 flex-row items-center justify-evenly tracking-widest px-4 md:mb-4"
+          className="h-auto m:h-[150px] w-full mt-12 mb-12 grid grid-cols-2 md:grid-cols-4 flex-row items-center justify-evenly tracking-widest px-4 md:mb-4"
         >
           <Link
             href={"https://github.com/Jcarloluna"}
@@ -162,12 +162,12 @@ export const Contact: React.FC<{}> = () => {
         <div ref={contactsMessageRef}>
           <div
             className={`duration-[2000ms] grid grid-cols-1 md:grid-cols-5 flex-row-reverse pb-12 md:gap-8 ${
-              isMessageVisible ? "animate-scale" : ""
+              isMessageVisible ? "" : "translate-y-[400px]"
             }`}
           >
             {/*left */}
             <div
-              className={`col-span-3 w-full h-auto shadow-gray-400 px-20 md:px-4 lg:p-4 flex justify-center items-center`}
+              className={`col-span-3 w-full h-auto shadow-gray-400 px-8 md:px-4 lg:p-4 flex justify-center items-center`}
             >
               <Image
                 src="/assets/contactsIcon/contactPhoto.svg"

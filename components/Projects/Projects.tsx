@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 const Projects: React.FC<{}> = () => {
   const router = useRouter();
   const { ref: projectsRef, inView: isComponentVisible } = useInView({
-    triggerOnce: true,
+   
   });
 
   const handleViewProjects = () => {
@@ -24,7 +24,7 @@ const Projects: React.FC<{}> = () => {
       id="projects"
       className={`w-full h-auto min-h-screen mt-[200px] `}
     >
-      <div className="w-full h-full mx-auto px-4 md:px-12 xl:px-24 flex justify-center items-center space-x-12">
+      <div className="w-full h-full mx-auto px-8 md:px-12 xl:px-24 flex justify-center items-center space-x-12">
         <div className="flex-col">
           <h1
             className={`tracking-widest text-center text-[#ab3a3adf] ${
@@ -68,14 +68,14 @@ const Projects: React.FC<{}> = () => {
               )
             )}
           </div>
-          <div className="flex justify-center items-center py-24">
-            {/* <button
+          {/* <div className="flex justify-center items-center py-24">
+            <button
               onClick={handleViewProjects}
               className="p4 bg-[#ab3a3adf] py-2 px-4 font-indie tracking-widest duration-300 hover:bg-[#862f2fdf]"
             >
               <h4> See More Projects </h4>
-            </button> */}
-          </div>
+            </button>
+          </div> */}
         </div>
       </div>
     </section>
