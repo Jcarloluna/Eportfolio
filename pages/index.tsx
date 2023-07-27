@@ -15,7 +15,7 @@ const Home = () => {
     <div className="dark:bg-[#1c1c1c] dark:text-white duration-1000 ease-in-out">
       <Navbar />
       <Head>
-        <title>JCLuna</title>
+        <title>JCL</title>
         <meta
           name="Jhon Carlo Luna | Developer Portfolio"
           content="I'm an aspiring web developer specializing in front-end development while exploring backend technologies"
