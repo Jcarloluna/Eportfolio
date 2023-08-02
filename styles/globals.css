@@ -42,11 +42,11 @@ html {
   }
   
   li {
-    @apply cursor-default dark:text-[#e3e3e3]
+    @apply cursor-auto dark:text-[#e3e3e3]
   }
 
   p{
-    @apply lg:text-[16px] sm:text-[15px] text-[14px] px-2 overflow-clip dark:text-[#e3e3e3] cursor-default
+    @apply lg:text-[16px] sm:text-[15px] text-[14px] px-2 overflow-clip dark:text-[#e3e3e3] cursor-auto
   }
 
   button {
