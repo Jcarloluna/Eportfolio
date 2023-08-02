@@ -30,11 +30,11 @@ export const Hero: React.FC<{}> = () => {
         "w-full min-h-screen h-auto lg:text-left pt-28 lg:pt-16 flex justify-center items-center px-4 md:px-20 lg:px-28 xl:px-48"
       `}
     >
-      <div className=" w-full relative h-full mx-auto p-2 grid lg:grid-cols-2 justify-center items-center">
+      <div className=" w-full relative h-full mx-auto p-2 grid xl:grid-cols-2 justify-center items-center">
         <div
           className={`overflow-hidden ease-in-out ${
             isContainerVisible ? "opacity-100" : "opacity-0"
-          } group relative text-left duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafacaf4] dark:bg-[#dedeb5f4] md:bg-[#fafaca] p-8 rounded-xl border-2 border-black tracking-widest `}
+          } group relative text-left duration-500 col-span-1 justify-center items-center shadow-xl bg-[#fafacaf4] dark:bg-[#dedeb5f4] md:bg-[#fafaca] p-8  xl:mb-0 rounded-xl border-2 border-black tracking-widest `}
         >
           <div className="relative flex justify-end translate-x-4 -translate-y-2">
             <div className="h-3 w-3 rounded-full bg-gray-900 shadow-xl" />
