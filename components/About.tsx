@@ -28,7 +28,7 @@ export const About: React.FC<{}> = () => {
             className={` 
               ${
                 isContainerVisible ? `scale-100 ` : `scale-50 `
-              } + ${"hover:scale-110 duration-300 ease-in-out max-h-[500px] max-w-[500px]"}
+              } + ${"hover:scale-110 duration-150 ease-in-out max-h-[500px] max-w-[500px]"}
             `}
           />
         </div>

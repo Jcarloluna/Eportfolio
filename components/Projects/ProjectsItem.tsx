@@ -28,12 +28,12 @@ export const ProjectsItem: React.FC<IProjects> = ({
   return (
     <div
       ref={projectsRef}
-      className="relative h-auto w-auto min-w-[25vw] lg:max-w-[30vw] sm:max-w-[70vw] max-w-[90vw]"
+      className="group relative h-auto w-auto min-w-[25vw] mb-8 lg:max-w-[30vw] sm:max-w-[70vw] max-w-[90vw]"
     >
-      <div className="absolute h-full w-full  translate-y-1 border-black border-[1px] rounded-[20px] bg-[#fafaca] dark:bg-[#dedeb5f4]" />
+      <div className="absolute group-hover:scale-[102%] duration-300 h-full w-full translate-y-1 -translate-x-2 border-black border-[1px] rounded-[20px] bg-[#fafaca] dark:bg-[#dedeb5f4]" />
 
       <div
-        className={`grid hover:shadow-2xl grid-rows-[9] h-full w-full bg-[#fafaca] dark:bg-[#dedeb5f4] rounded-[20px] border-[1px] shadow-lg border-gray-800 ${
+        className={`grid group-hover:shadow-2xl group-hover:scale-[102%] duration-300 grid-rows-[9] h-full w-full bg-[#fafaca] dark:bg-[#dedeb5f4] rounded-[20px] border-[1px] shadow-lg border-gray-800 ${
           isProjectsVisible ? "translate-y-[0]" : "opacity-20"
         } `}
       >
@@ -41,7 +41,7 @@ export const ProjectsItem: React.FC<IProjects> = ({
           className={`overflow-hidden row-span-2 custom-shadow-inner h-full w-full py-4 bg-yellow-200 border-b-[1px]  rounded-[20px] max-h-[200px] border-gray-900 `}
         >
           <div
-            className={`justify-center items-start  bg-white mx-4 border-black border-[1px] grid grid-rows-3 min-h-[400px] duration-[2s] ${
+            className={`justify-center items-start  bg-white mx-4 border-black border-[1px] grid grid-rows-3 min-h-[400px] duration-[750ms] ${
               isProjectsVisible ? "translate-y-[0]" : "translate-y-[400px]"
             }`}
           >

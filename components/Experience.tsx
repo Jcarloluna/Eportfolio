@@ -34,19 +34,21 @@ export const Experience: React.FC<{}> = () => {
             className="grid md:grid-cols-3 py-2 md:py-8 space-y-4 md:space-y-0 md:space-x-8  gap-4 md:gap-16"
           >
             <div className="col-span-2 md:col-span-1 flex justify-center items-center">
-              <Image
-                src="/assets/xurpasLogo.png"
-                alt="Image"
-                width={300}
-                height={250}
-                style={{
-                  width: "100%",
-                  height: "auto",
-                }}
-                className={`md:max-h-[400px] max-h-[200px] max-w-[200px] hover:scale-110 md:max-w-[400px] duration-1000 ${
-                  isXurpasComponentVisible ? "scale-1" : "scale-0"
-                }`}
-              />
+              <Link href="https://xurpasgroup.com" target="_blank">
+                <Image
+                  src="/assets/xurpasLogo.png"
+                  alt="Image"
+                  width={300}
+                  height={250}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  className={`md:max-h-[400px] max-h-[200px] max-w-[200px] hover:scale-110 md:max-w-[400px] duration-150 ${
+                    isXurpasComponentVisible ? "scale-1" : "scale-0"
+                  }`}
+                />
+              </Link>
             </div>
             <div
               className={`col-span-2 duration-[1500ms] ${
@@ -55,11 +57,11 @@ export const Experience: React.FC<{}> = () => {
                   : "translate-y-[150px]"
               }`}
             >
-              <h2 className="text-gray-900 py-4 pattern-checks-sm text-pattern white">
+              <h2 className="text-gray-900 cursor-default  py-4 pattern-checks-sm text-pattern white">
                 Xurpas Inc | Makati, Philippines
               </h2>
-              <h4 className="text-gray-900">Frontend Developer Intern</h4>
-              <span className="text-xl text-[#ab3a3adf] ">
+              <h4 className="text-gray-900 cursor-default ">Frontend Developer Intern</h4>
+              <span className="text-xl text-[#ab3a3adf] cursor-default  ">
                 (March 2023 - June 2023)
               </span>
 
@@ -107,7 +109,8 @@ export const Experience: React.FC<{}> = () => {
               EDUCATION
             </h1>
             <div className="grid md:grid-cols-3 flex-col-reverse  py-8 space-y-4 md:space-x-8 md:gap-16 ">
-              <div className="flex col-span-2 md:col-span-1 justify-center items-center">
+              <div className="flex col-span-2 md:col-span-1 justify-center items-center hover:scale-110 duration-150">
+                <Link href="https://www.tupcavite.edu.ph" target="_blank">
                 <Image
                   src="/assets/tupLogo.png"
                   alt="Image"
@@ -117,10 +120,11 @@ export const Experience: React.FC<{}> = () => {
                     width: "100%",
                     height: "auto",
                   }}
-                  className={`md:max-h-[300px] max-h-[150px] max-w-[150px] hover:scale-110  md:max-w-[300px] ${
+                  className={`md:max-h-[300px] max-h-[150px] max-w-[150px]   md:max-w-[300px] ${
                     isTupComponentVisible ? "animate-swirl" : ""
                   }`}
                 />
+                </Link>
               </div>
               <div
                 className={`col-span-2 duration-[1500ms] ${

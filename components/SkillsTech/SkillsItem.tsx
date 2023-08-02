@@ -17,7 +17,7 @@ const SkillsItem: React.FC<Props> = ({ image, imageLabel }: Props) => {
       <div className="absolute h-full w-full -translate-x-2 border-black border-[1px] rounded-xl bg-[#fafaca] dark:bg-[#dedeb5f4]" />
       <div className="absolute h-full w-full -translate-x-1 border-black border-[1px] rounded-xl bg-[#fafaca] dark:bg-[#dedeb5f4]" />
       <div
-        className={`p-6 shadow-xl w-full h-full rounded-xl group-hover:rotate-[-8deg] group-hover:-translate-y-[8px] group-hover:translate-x-[6px] rotate-[0deg] ease-in duration-300 dark:bg-[#dedeb5f4] bg-[#fafaca] overflow-hidden border-black border-[1px]
+        className={`p-6 shadow-xl w-full h-full rounded-xl group-hover:rotate-[-8deg] group-hover:-translate-y-[8px] group-hover:translate-x-[6px] rotate-[0deg] ease-in duration-150 dark:bg-[#dedeb5f4] bg-[#fafaca] overflow-hidden border-black border-[1px]
         `}
       >
         <div className="fixed justify-start">
@@ -35,7 +35,7 @@ const SkillsItem: React.FC<Props> = ({ image, imageLabel }: Props) => {
               alt="/"
             />
           </div>
-          <div className="flex flex-col cursor-auto items-center justify-center group-hover:font-extrabold group-hover:text-[#ab3a3adf] indie duration-100">
+          <div className="flex flex-col cursor-default items-center justify-center group-hover:font-extrabold group-hover:text-[#ab3a3adf] indie duration-100">
             <h4 className="dark:text-gray-900">{imageLabel}</h4>
           </div>
         </div>

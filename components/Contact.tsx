@@ -98,7 +98,7 @@ export const Contact: React.FC<{}> = () => {
         >
           <Link
             href={"https://github.com/Jcarloluna"}
-            className="active:scale-90 hover:scale-110 duration-300 justify-around items-center flex"
+            className="active:scale-90 hover:scale-110 duration-150 justify-around items-center flex"
             target="_blank"
           >
             <Image
@@ -113,7 +113,7 @@ export const Contact: React.FC<{}> = () => {
           </Link>
           <Link
             href={"https://www.linkedin.com/in/jhon-carlo-luna-508a5a265/"}
-            className="active:scale-90 hover:scale-110 duration-300  justify-center items-center flex"
+            className="active:scale-90 hover:scale-110 duration-150  justify-center items-center flex"
             target="_blank"
           >
             <Image
@@ -128,7 +128,7 @@ export const Contact: React.FC<{}> = () => {
           </Link>
           <Link
             href={"https://www.facebook.com/Carlo.Luna24"}
-            className="active:scale-90 hover:scale-110 duration-300  justify-center items-center flex"
+            className="active:scale-90 hover:scale-110 duration-150  justify-center items-center flex"
             target="_blank"
           >
             <Image
@@ -145,7 +145,7 @@ export const Contact: React.FC<{}> = () => {
             href={
               "https://mail.google.com/mail/u/lee@example.org/?view=cm&to=jclunawork@gmail.com"
             }
-            className="active:scale-90 hover:scale-110 duration-300 justify-center items-center flex"
+            className="active:scale-90 hover:scale-110 duration-150 justify-center items-center flex"
             target="_blank"
           >
             <Image
@@ -161,8 +161,8 @@ export const Contact: React.FC<{}> = () => {
         </div>
         <div ref={contactsMessageRef}>
           <div
-            className={`duration-[2000ms] grid grid-cols-1 md:grid-cols-5 flex-row-reverse pb-12 md:gap-8 ${
-              isMessageVisible ? "" : "translate-y-[400px]"
+            className={`duration-[1000ms] grid grid-cols-1 md:grid-cols-5 flex-row-reverse pb-12 md:gap-8 ${
+              isMessageVisible ? "" : "translate-y-[200px]"
             }`}
           >
             {/*left */}
@@ -253,7 +253,7 @@ export const Contact: React.FC<{}> = () => {
                         <h4>Send Message</h4>
                       </span>
                       <span className="col-span-2 justify-end flex">
-                        <div className="z-[1] relative duration-700 lg:translate-x-[-950%] lg:group-hover:translate-x-[0%] lg:rotate-[-45deg] lg:-translate-y-[-30%] lg:scale-[2.5] group-hover:scale-[1.2] group-hover:translate-y-[0%] group-hover:rotate-0">
+                        <div className="z-[1] relative duration-500 lg:translate-x-[-950%] lg:group-hover:translate-x-[0%] lg:rotate-[-45deg] lg:-translate-y-[-30%] lg:scale-[2.5] group-hover:scale-[1.2] group-hover:translate-y-[0%] group-hover:rotate-0">
                           <Image
                             src="/assets/contactsIcon/iconSent2.png"
                             alt="Image"

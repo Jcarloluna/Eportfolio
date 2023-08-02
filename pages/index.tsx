@@ -12,7 +12,7 @@ import { DarkModeButton } from "../components/DarkMode";
 
 const Home = () => {
   return (
-    <div className="dark:bg-[#1c1c1c] dark:text-white duration-1000 ease-in-out">
+    <div className="dark:bg-[#1c1c1c] dark:text-white duration-300 ease-in-out">
       <Navbar />
       <Head>
         <title>JCL</title>

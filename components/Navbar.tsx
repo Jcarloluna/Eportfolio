@@ -29,7 +29,8 @@ const Navbar: React.FC<{}> = () => {
   const navStyle =
     "flex flex-row fixed justify-between items-center w-full px-8 md:px-20 lg:px-28 xl:px-48 py-5 z-50 ";
   const sectionLinks =
-    "ml-10 uppercase tracking-widest hover:text-[#ab3a3adf] hover:border-b-[3px] ease-in-out hover:border-[#ab3a3adf]";
+    "ml-10 uppercase cursor-pointer  tracking-widest hover:text-[#ab3a3adf] hover:border-b-[3px] ease-in-out hover:border-[#ab3a3adf]";
+  const mobileSectionLinks = "py-4 text-sm group cursor-pointer"
 
   return (
     <div
@@ -77,7 +78,7 @@ const Navbar: React.FC<{}> = () => {
               Projects
             </ReactLink>
           </li>
-          <li className="ml-10 text-lg font-indie tracking-widest text-[#f7f4e9] rounded-full bg-[#ab3a3adf] px-3 py-1 cursor-pointer ease-in duration-300 hover:bg-[#862f2fdf]">
+          <li className="ml-10 text-lg font-indie tracking-widest text-[#f7f4e9] rounded-full bg-[#ab3a3adf] px-3 py-1 cursor-pointer ease-in hover:bg-[#862f2fdf]">
             <ReactLink to={"contact"} smooth={true} duration={350} offset={-50}>
               Contact
             </ReactLink>
@@ -104,8 +105,8 @@ const Navbar: React.FC<{}> = () => {
           <div
             className={
               burgerNav
-                ? " fixed left-0 top-0 w-[100%] md:w-[65%] h-full bg-[#EAE5D9] dark:bg-[#1c1c1c] border-r-2 border-black p-10 ease-in duration-500 z-50"
-                : "fixed left-[-300%] top-0 p-10 ease-in duration-500"
+                ? " fixed left-0 top-0 w-[100%] sm:w-[65%] h-full bg-[#EAE5D9] dark:bg-[#1c1c1c] border-r-2 border-black p-10 ease-in duration-500 z-50"
+                : "fixed left-[-300%] top-0 p-10 ease-in duration-300"
             }
           >
             <div>
@@ -133,7 +134,7 @@ const Navbar: React.FC<{}> = () => {
                 <Link href="/">
                   <li
                     onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm group"
+                    className={mobileSectionLinks}
                   >
                     <h3 className="group hover:text-[#ab3a3adf]">Home</h3>
                   </li>
@@ -141,7 +142,8 @@ const Navbar: React.FC<{}> = () => {
                 <Link href="/#about">
                   <li
                     onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm group"
+                    className={mobileSectionLinks}
+
                   >
                     <h3 className="group hover:text-[#ab3a3adf]">About</h3>
                   </li>
@@ -149,7 +151,8 @@ const Navbar: React.FC<{}> = () => {
                 <Link href="/#skills">
                   <li
                     onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm group"
+                    className={mobileSectionLinks}
+
                   >
                     <h3 className="group hover:text-[#ab3a3adf]">Skills</h3>
                   </li>
@@ -157,7 +160,8 @@ const Navbar: React.FC<{}> = () => {
                 <Link href="/#projects">
                   <li
                     onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm group"
+                    className={mobileSectionLinks}
+
                   >
                     <h3 className="group hover:text-[#ab3a3adf]">Projects</h3>
                   </li>
@@ -165,7 +169,8 @@ const Navbar: React.FC<{}> = () => {
                 <Link href="/#contact">
                   <li
                     onClick={() => setBurgerNav(false)}
-                    className="py-4 text-sm group"
+                    className={mobileSectionLinks}
+
                   >
                     <h3 className="group hover:text-[#ab3a3adf]">Contact</h3>
                   </li>
